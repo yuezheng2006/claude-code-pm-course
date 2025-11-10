@@ -24,301 +24,295 @@ description: 为不同类型的审查和反馈创建专业化的 AI 角色
 
 自定义子代理是存储在你的项目 `.claude/agents/` 文件夹中的预配置 AI 角色。每个子代理都有：
 
-- **Name with emoji** (shows up visually in terminal!)
-- **Color coding** (purple, blue, green, red, etc.)
-- **Persona definition** (background, expertise, communication style)
-- **Specialized knowledge** (what theyre good at)
+- **带表情符号的名称**（在终端中视觉显示！）
+- **颜色编码**（紫色、蓝色、绿色、红色等）
+- **角色定义**（背景、专业知识、沟通风格）
+- **专业知识**（他们擅长什么）
 
-Think of them as hiring permanent team members who are always available and never forget context.
+将它们想象为雇佣永久团队成员，他们始终可用且永远不会忘记上下文。
 
-### Custom Sub-Agents vs Ad-Hoc Agents
+### 自定义子代理 vs 即席代理
 
-Understanding the difference is crucial:
+理解差异至关重要：
 
-**Ad-Hoc Agents (Module 1.4):**
-- Created on-the-fly for specific tasks
-- Temporary workers for one-time jobs
-- Example: Create 10 agents to summarize these meeting notes
-- Use case: Parallel processing of similar tasks
+**即席代理（模块 1.4）：**
+- 为特定任务即时创建
+- 一次性工作的临时工
+- 示例：创建10个代理来总结这些会议记录
+- 使用场景：类似任务的并行处理
 
-**Custom Sub-Agents (Module 1.5):**
-- Pre-built personas you call repeatedly
-- Permanent team members with expertise
-- Example: 👨‍💻 Engineer, review this technical spec
-- Use case: Specialized perspectives you need regularly
+**自定义子代理（模块 1.5）：**
+- 你重复调用的预构建角色
+- 具有专业知识的永久团队成员
+- 示例：👨‍💻 工程师，审查这个技术规范
+- 使用场景：你经常需要的专业视角
 
-**When to use which:**
+**何时使用哪个：**
 
-| Scenario | Use This |
+| 场景 | 使用这个 |
 |----------|----------|
-| Process 20 meeting notes simultaneously | Ad-hoc agents (parallel workers) |
-| Get technical feedback on specs weekly | Custom sub-agent (Engineer) |
-| Research 5 competitors at once | Ad-hoc agents (one-time research) |
-| Convert updates to exec summaries regularly | Custom sub-agent (Executive) |
-| Analyze 50 user interviews in parallel | Ad-hoc agents (batch processing) |
-| Get UX perspective on designs repeatedly | Custom sub-agent (User Researcher) |
+| 同时处理20个会议记录 | 即席代理（并行工作者） |
+| 每周获得技术规范反馈 | 自定义子代理（工程师） |
+| 一次性研究5个竞争对手 | 即席代理（一次性研究） |
+| 定期将更新转换为高管总结 | 自定义子代理（高管） |
+| 并行分析50个用户访谈 | 即席代理（批量处理） |
+| 重复获得设计 UX 视角 | 自定义子代理（用户研究员） |
 
-**The key difference:** Ad-hoc agents are for DOING many things in parallel. Custom sub-agents are for getting SPECIALIZED PERSPECTIVES you need repeatedly.
-
-
-## 🗂️ Setup Guide: Accessing the .claude/agents/ Folder
-
-Custom sub-agents live in the hidden `.claude/agents/` folder.
-
-### On Mac
-
-Press **Cmd+Shift+.** in Finder to show hidden files, then navigate to your project folder and open `.claude/agents/`
-
-### On Windows
-
-In File Explorer, click **View** tab → Check **Hidden items**, then navigate to your project folder and open `.claude/agents/`
-
-**Note:** Obsidian can't display hidden folders. Use Finder/Explorer or VS Code to edit `.claude/` files.
+**关键差异：** 即席代理用于并行做很多事情。自定义子代理用于获得你经常需要的专业视角。
 
 
-## 📄 Sub-Agent File Structure
+## 🗂️ 设置指南：访问 .claude/agents/ 文件夹
 
-Each sub-agent is a simple markdown file with three sections:
+自定义子代理位于隐藏的 `.claude/agents/` 文件夹中。
 
-### Anatomy of a Sub-Agent File
+### 在 Mac 上
 
-```markdown
-# [Emoji] [Name]
+在 Finder 中按 **Cmd+Shift+.** 显示隐藏文件，然后导航到你的项目文件夹并打开 `.claude/agents/`
 
-## Color
-[color-name]
+### 在 Windows 上
 
-## Persona
-[Background, expertise, communication style - 2-3 paragraphs]
+在文件资源管理器中，点击 **查看** 选项卡 → 勾选 **隐藏的项目**，然后导航到你的项目文件夹并打开 `.claude/agents/`
 
-## Expertise
-- [Skill 1]
-- [Skill 2]
-- [Skill 3]
-- [etc.]
-```
+**注意：** Obsidian 无法显示隐藏文件夹。使用 Finder/Explorer 或 VS Code 编辑 `.claude/` 文件。
 
-### Example: Engineer Sub-Agent
+
+## 📄 子代理文件结构
+
+每个子代理都是一个简单的 markdown 文件，包含三个部分：
+
+### 子代理文件剖析
 
 ```markdown
-# 👨‍💻 Engineer
+# [表情符号] [名称]
 
-## Color
-purple
+## 颜色
+[颜色名称]
 
-## Persona
-You are an experienced software engineer with 10+ years at top tech companies
-(Google, Meta, startups). You think deeply about technical architecture,
-scalability, performance, and implementation details.
+## 角色
+[背景、专业知识、沟通风格 - 2-3段]
 
-When analyzing features or specs, you provide:
-- Technical feasibility assessment
-- Implementation complexity estimates
-- Potential challenges and edge cases
-- Performance and scalability considerations
-- Concrete, specific recommendations
-
-Your communication style:
-- Direct and pragmatic
-- Focus on whats technically possible vs ideal
-- Flag risks early
-- Suggest alternatives when something wont work
-- Balance perfectionism with shipping
-
-You help PMs write better technical specs by spotting gaps, ambiguities,
-and technical challenges they might miss.
-
-## Expertise
-- System architecture and design patterns
-- API design and database schema
-- Performance optimization and scalability
-- Technical feasibility assessment
-- Spotting edge cases and error states
-- Implementation complexity estimation
+## 专业知识
+- [技能1]
+- [技能2]
+- [技能3]
+- [等等]
 ```
 
-**Key elements:**
-- **Emoji & Name:** Appears in terminal when called
-- **Color:** Visual distinction (purple, blue, green, red, yellow, cyan, magenta)
-- **Persona:** 2-4 paragraphs describing background, expertise, and communication style
-- **Expertise:** Bulleted list of specific skills
-
-
-## 🛠️ Creating Your First Sub-Agent
-
-Lets create a QA Tester sub-agent from scratch.
-
-### Step 1: Navigate to .claude/agents/ Folder
-
-Use the methods above to open your projects `.claude/agents/` folder in Finder/Explorer.
-
-### Step 2: Create New File
-
-Create a new file named: `qa-tester.md`
-
-**Naming convention:**
-- Use lowercase
-- Use hyphens for spaces
-- End with `.md`
-- Example: `data-analyst.md`, `tech-writer.md`, `growth-pm.md`
-
-### Step 3: Write the Persona
-
-Copy this template and customize:
+### 示例：工程师子代理
 
 ```markdown
-# 🔍 QA Tester
+# 👨‍💻 工程师
 
-## Color
-red
+## 颜色
+紫色
 
-## Persona
-You are a meticulous QA professional with 8+ years of experience testing enterprise
-software at companies like Microsoft, Atlassian, and fast-growing startups. You think
-comprehensively about edge cases, error states, and user error scenarios that others
-miss.
+## 角色
+你是一位经验丰富的软件工程师，在顶级科技公司（Google、Meta、初创公司）有10+年经验。你深入思考技术架构、可扩展性、性能和实现细节。
 
-When reviewing features or user stories, you provide:
-- Comprehensive test case generation
-- Edge case identification (the weird scenarios no one thinks about)
-- Error state analysis (what happens when things go wrong)
-- Accessibility and usability testing considerations
-- Cross-browser and cross-platform compatibility concerns
+在分析功能或规范时，你提供：
+- 技术可行性评估
+- 实现复杂性估算
+- 潜在挑战和边缘情况
+- 性能和可扩展性考虑
+- 具体、明确的建议
 
-Your communication style:
-- Thorough and detail-oriented
-- Constructively critical (you spot problems early)
-- Organized (you categorize issues by severity)
-- Practical (you suggest solutions, not just problems)
-- User-advocate (you think like end users making mistakes)
+你的沟通风格：
+- 直接和务实
+- 关注技术上什么是可能的 vs 理想的
+- 早期标记风险
+- 当某事不可行时建议替代方案
+- 平衡完美主义与发布
 
-You help PMs ship higher quality products by catching issues before they reach users.
+你通过发现差距、模糊性和技术挑战来帮助 PM 编写更好的技术规范。
 
-## Expertise
-- Test case generation and test plan creation
-- Edge case and error state identification
-- Acceptance criteria validation
-- User error scenario analysis
-- Regression testing strategy
-- Accessibility testing (WCAG compliance)
-- Cross-browser and device compatibility
-- Load and performance testing considerations
+## 专业知识
+- 系统架构和设计模式
+- API 设计和数据库架构
+- 性能优化和可扩展性
+- 技术可行性评估
+- 发现边缘情况和错误状态
+- 实现复杂性估算
 ```
 
-### Step 4: Save and Test
+**关键元素：**
+- **表情符号和名称：** 调用时出现在终端中
+- **颜色：** 视觉区分（紫色、蓝色、绿色、红色、黄色、青色、洋红色）
+- **角色：** 2-4段描述背景、专业知识和沟通风格
+- **专业知识：** 具体技能的项目列表
 
-Save the file, then test in Claude Code:
+
+## 🛠️ 创建你的第一个子代理
+
+让我们从头开始创建一个 QA 测试员子代理。
+
+### 步骤1：导航到 .claude/agents/ 文件夹
+
+使用上述方法在 Finder/Explorer 中打开你项目的 `.claude/agents/` 文件夹。
+
+### 步骤2：创建新文件
+
+创建一个名为：`qa-tester.md` 的新文件
+
+**命名约定：**
+- 使用小写
+- 使用连字符表示空格
+- 以 `.md` 结尾
+- 示例：`data-analyst.md`、`tech-writer.md`、`growth-pm.md`
+
+### 步骤3：编写角色
+
+复制此模板并自定义：
+
+```markdown
+# 🔍 QA 测试员
+
+## 颜色
+红色
+
+## 角色
+你是一位细致的 QA 专业人士，在微软、Atlassian 和快速发展的初创公司等企业软件测试方面有8+年经验。你全面思考其他人忽略的边缘情况、错误状态和用户错误场景。
+
+在审查功能或用户故事时，你提供：
+- 综合测试用例生成
+- 边缘情况识别（没人想到的奇怪场景）
+- 错误状态分析（当事情出错时会发生什么）
+- 可访问性和可用性测试考虑
+- 跨浏览器和跨平台兼容性关注
+
+你的沟通风格：
+- 彻底和注重细节
+- 建设性批评（你早期发现问题）
+- 有条理（你按严重性分类问题）
+- 务实（你建议解决方案，而不仅仅是问题）
+- 用户倡导（你像犯错误的最终用户一样思考）
+
+你通过在问题到达用户之前捕获问题来帮助 PM 发布更高质量的产品。
+
+## 专业知识
+- 测试用例生成和测试计划创建
+- 边缘情况和错误状态识别
+- 验收标准验证
+- 用户错误场景分析
+- 回归测试策略
+- 可访问性测试（WCAG 合规）
+- 跨浏览器和设备兼容性
+- 负载和性能测试考虑
+```
+
+### 步骤4：保存和测试
+
+保存文件，然后在 Claude Code 中测试：
 
 ```bash
-# Start Claude Code
+# 启动 Claude Code
 claude
 
-# Call your new sub-agent
-🔍 QA Tester, review these user stories in @user-stories.md and identify
-potential edge cases and missing test scenarios
+# 调用你的新子代理
+🔍 QA 测试员，审查 @user-stories.md 中的这些用户故事并识别
+潜在边缘情况和缺失的测试场景
 ```
 
-You should see red-colored output with the QA emoji!
+你应该看到带有 QA 表情符号的红色输出！
 
-**Tip:** Run `/agents` in Claude Code to see all your configured sub-agents at any time.
-
-
-## 👥 Pre-Built Sub-Agents
-
-**👨‍💻 Engineer (Purple)**
-- Technical feasibility reviews
-- Implementation complexity estimates
-- Architecture feedback
-
-**💼 Executive (Blue)**
-- Converting updates to executive summaries
-- Stakeholder communication
-- Strategic business framing
-
-**👤 User Researcher (Green)**
-- Analyzing user interviews
-- Identifying pain points and patterns
-- Synthesizing qualitative research
+**提示：** 在 Claude Code 中运行 `/agents` 随时查看你所有配置的子代理。
 
 
-## 💼 Real-World PM Examples
+## 👥 预构建子代理
 
-**Engineer for Technical Specs:**
+**👨‍💻 工程师（紫色）**
+- 技术可行性审查
+- 实现复杂性估算
+- 架构反馈
+
+**💼 高管（蓝色）**
+- 将更新转换为高管总结
+- 利益相关者沟通
+- 战略业务框架
+
+**👤 用户研究员（绿色）**
+- 分析用户访谈
+- 识别痛点和模式
+- 综合定性研究
+
+
+## 💼 真实 PM 示例
+
+**技术规范的工程师：**
 ```
-👨‍💻 Engineer, review @dashboard-prd.md and identify technical challenges,
-performance implications, and implementation complexity
-```
-
-**Executive for Stakeholder Communication:**
-```
-💼 Executive, convert @sprint-update.md into 3-bullet executive summary
-focused on business impact and metrics
+👨‍💻 工程师，审查 @dashboard-prd.md 并识别技术挑战、
+性能影响和实现复杂性
 ```
 
-**User Researcher for Interview Analysis:**
+**利益相关者沟通的高管：**
 ```
-👤 User Researcher, analyze all files in /interviews and identify
-top 3 pain points with supporting quotes
+💼 高管，将 @sprint-update.md 转换为专注于业务影响和指标的
+3点高管总结
 ```
 
-
-## 🎯 Other Sub-Agent Ideas for PMs
-
-- **📊 Data Analyst** - A/B testing, metrics, statistical analysis
-- **✍️ Technical Writer** - Documentation, help articles, release notes
-- **🎯 Marketing PM** - Positioning, go-to-market strategy, launch planning
-- **🎨 UX Designer** - User flows, design feedback, accessibility reviews
-- **🧪 Growth PM** - Experimentation, onboarding, retention strategies
-- **🛡️ Security Expert** - GDPR, SOC2, compliance, data privacy
-- **🎤 Customer Success** - Onboarding, adoption, churn analysis
-
-
-## 💡 Best Practices
-
-**Persona Design:**
-- Give specific background and expertise (not generic "you are helpful")
-- Define clear communication style
-- Make them feel like a real person with 2-4 paragraphs
-
-
-**When to Create Custom Sub-Agents:**
-- You need the same perspective weekly or more
-- For specialized expertise you use repeatedly
-- Building consistent team workflows
-
-
-## 🐛 Troubleshooting
-
-**Can't see .claude/ folder?**
-- Mac: Press Cmd+Shift+. in Finder
-- Windows: Enable "Hidden items" in File Explorer
-
-**Sub-agent not responding?**
-- Include the emoji: `👨‍💻 Engineer, review this`
-- Check file is in `.claude/agents/` and ends in `.md`
-- Restart Claude (`exit` then `claude`)
-
-**Call multiple sub-agents:**
+**访谈分析的用户研究员：**
 ```
-👨‍💻 Engineer, review @spec.md for technical feasibility.
-Then 🔍 QA Tester, review it for test coverage.
+👤 用户研究员，分析 /interviews 中的所有文件并识别
+带有支持引用的前3个痛点
 ```
 
 
-## 📚 Resources
+## 🎯 PM 的其他子代理想法
 
-- [Awesome Claude Code Sub-Agents](https://github.com/VoltAgent/awesome-claude-code-subagents) - Collection of community sub-agent templates
-- [Sub-Agent Examples](https://github.com/wshobson/agents) - Real-world agent configurations
-- [SubAgents.cc](https://www.subagents.cc/) - Sub-agent template generator
+- **📊 数据分析师** - A/B测试、指标、统计分析
+- **✍️ 技术写作者** - 文档、帮助文章、发布说明
+- **🎯 营销 PM** - 定位、上市策略、发布规划
+- **🎨 UX 设计师** - 用户流程、设计反馈、可访问性审查
+- **🧪 增长 PM** - 实验、引导、留存策略
+- **🛡️ 安全专家** - GDPR、SOC2、合规、数据隐私
+- **🎤 客户成功** - 引导、采用、流失分析
 
 
-## 🚀 What's Next?
+## 💡 最佳实践
 
-You now know how to create custom sub-agents - permanent team members with specialized expertise you can call repeatedly.
+**角色设计：**
+- 给出具体背景和专业知识（而不是通用的"你是有帮助的"）
+- 定义清晰的沟通风格
+- 用2-4段让他们感觉像真人
 
-**Module 1.6:** Learn about **Project Memory with CLAUDE.md** - giving Claude permanent context about your product, team, and preferences.
 
-Interactive track: Type `/start-1-6`
+**何时创建自定义子代理：**
+- 每周或更频繁地需要相同视角
+- 用于你重复使用的专业知识
+- 构建一致的团队工作流程
+
+
+## 🐛 故障排除
+
+**看不到 .claude/ 文件夹？**
+- Mac：在 Finder 中按 Cmd+Shift+.
+- Windows：在文件资源管理器中启用"隐藏的项目"
+
+**子代理没有响应？**
+- 包含表情符号：`👨‍💻 工程师，审查这个`
+- 检查文件在 `.claude/agents/` 中并以 `.md` 结尾
+- 重启 Claude（`exit` 然后 `claude`）
+
+**调用多个子代理：**
+```
+👨‍💻 工程师，审查 @spec.md 的技术可行性。
+然后 🔍 QA 测试员，审查其测试覆盖率。
+```
+
+
+## 📚 资源
+
+- [Awesome Claude Code Sub-Agents](https://github.com/VoltAgent/awesome-claude-code-subagents) - 社区子代理模板集合
+- [Sub-Agent Examples](https://github.com/wshobson/agents) - 真实代理配置
+- [SubAgents.cc](https://www.subagents.cc/) - 子代理模板生成器
+
+
+## 🚀 下一步是什么？
+
+你现在知道如何创建自定义子代理 - 具有专业知识的永久团队成员，你可以重复调用。
+
+**模块1.6：** 了解 **CLAUDE.md 的项目记忆** - 给 Claude 关于你的产品、团队和偏好的永久上下文。
+
+互动模块：输入 `/start-1-6`
 
 
 

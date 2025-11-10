@@ -16,423 +16,426 @@ SingTech是专业的K歌娱乐解决方案提供商。想象一下**全民K歌�
 **对于寻求优质K歌体验的用户和商家，** SingTech提供**AI驱动的智能K歌平台和全场景娱乐解决方案。** 不像传统点歌机（功能简单、体验差）或纯移动APP（场景单一），SingTech**在专业性和易用性之间取得完美平衡，成本仅为传统设备的50%。**
 
 
-## Product Philosophy
-
-### Key Principles
-
-**1. Async-first design**
-- No real-time coordination required
-- Rich context on every task
-- Updates work across timezones
-- Comments replace meetings
-
-**2. Context over status**
-- Every task answers: What? Why? Who? When? How?
-- No cryptic task titles
-- Full background always attached
-- Reduces whats this about? questions
-
-**3. Speed matters**
-- Sub-second page loads
-- Keyboard shortcuts everywhere
-- No loading spinners
-- Instant search
-
-**4. Opinionated with escape hatches**
-- Strong defaults (workflows that work)
-- Flexibility when needed
-- Not overwhelming with options
-
-**5. Beautiful and functional**
-- Design quality matters
-- UI guides users to success
-- Delightful micro-interactions
-
-
-## Core Features
-
-### 1. Task Management
-
-**What users can do:**
-- Create tasks with rich descriptions (markdown support)
-- Assign to team members
-- Set due dates, priorities, tags
-- Add attachments, links, context
-- Subtasks for complex work
-- Custom fields (text, number, select, date)
-
-**Our differentiation:**
-- **Context cards:** Every task has built-in space for context (why, background, decisions)
-- **Rich descriptions:** Full markdown, embeds, code blocks
-- **Smart defaults:** Priority, owner, due date auto-suggested based on patterns
-
-### 2. Projects & Organization
-
-**What users can do:**
-- Create projects (collections of tasks)
-- Multiple views: List, Board (Kanban), Calendar, Timeline (Gantt)
-- Filter and sort tasks
-- Saved views (custom filters)
-- Project templates
-
-**Our differentiation:**
-- **View memory:** Tool remembers your preferred view per project
-- **Smart filters:** Natural language (My tasks due this week)
-- **Project status:** Auto-calculated based on task completion
-
-### 3. Collaboration
-
-**What users can do:**
-- Comment on tasks (threaded discussions)
-- @mention team members
-- React with emojis
-- Subscribe to task updates
-- Activity feed (whats happening)
-
-**Our differentiation:**
-- **Comment summaries:** AI-generated summary of long threads
-- **Decision tracking:** Mark comments as Decision (findable later)
-- **Context preservation:** Every update includes full context
-
-### 4. Notifications
-
-**What users can do:**
-- Email, in-app, Slack, mobile notifications
-- Granular preferences (what to get notified about)
-- Digest mode (batched notifications)
-- Snooze notifications
-
-**Our differentiation:**
-- **Smart batching:** Multiple updates → one notification
-- **Contextual notifications:** Includes enough context to act without clicking
-- **Timezone aware:** Notifications only during work hours
-
-### 5. Integrations
-
-**What users can do:**
-- **Slack:** Post updates, create tasks, get notifications
-- **GitHub:** Link PRs to tasks, auto-update status
-- **Figma:** Embed designs, link to tasks
-- **Google Drive:** Attach docs, preview in-app
-- **Calendar:** Sync due dates (Google Cal, Outlook)
-
-**Our differentiation:**
-- **Two-way sync:** Changes in TaskFlow update connected tools
-- **Context flow:** Integrations pull in context automatically
-
-### 6. Reporting & Analytics
-
-**What users can do:**
-- Team velocity (tasks completed over time)
-- Cycle time (time to complete)
-- Burndown charts
-- Custom reports (filter by anything)
-- Export to CSV
-
-**Our differentiation:**
-- **Automatic insights:** Team velocity decreased 20% - investigate
-- **Predictive analytics:** At current pace, project will finish 3 days late
-
-
-## User Personas (Detailed)
-
-### Persona 1: Sarah (Enterprise Admin)
-
-**Demographics:**
-- Age: 35-45
-- Role: IT Admin / Operations Lead
-- Company: 500+ employees
-- Location: Remote (various)
-
-**Goals:**
-- Centralize tools (reduce tool sprawl)
-- Ensure security and compliance
-- Control access and permissions
-- Reduce costs
-
-**Pain Points:**
-- Teams using 20+ tools (scattered work)
-- No visibility into whats happening
-- Security concerns (who has access to what?)
-- Hard to onboard new employees (too many tools)
-
-**Jobs to be Done:**
-- When a new employee joins, consolidate their tool access in one place
-- When auditors ask for access logs, provide comprehensive audit trail
-- When evaluating tools, ensure they meet enterprise security standards
-
-**TaskFlow Features They Love:**
-- SSO (Single Sign-On) integration
-- Advanced permissions (role-based access)
-- Audit logs (who did what, when)
-- Admin dashboard (org-wide visibility)
-- Bulk user management
-
-**Quote:** *I need to know who has access to what, and I need to be able to revoke it instantly if someone leaves.*
-
-
-### Persona 2: Mike (IC Engineer)
-
-**Demographics:**
-- Age: 25-35
-- Role: Individual Contributor Engineer
-- Company: 50-200 employees (startup)
-- Location: Remote (global)
-
-**Goals:**
-- Clear task assignments (what to work on)
-- Minimize context switching
-- Deep work time (no interruptions)
-- Simple, fast tools
+## 产品理念
+
+### 核心原则
+
+**1. 场景优先设计**
+- 支持全场景K歌娱乐（KTV、家庭、移动）
+- 丰富的歌曲和用户上下文
+- 跨设备无缝体验
+- AI推荐替代传统搜索
+
+**2. 体验胜于功能**
+- 每首歌单都包含：主题、氛围、适合场景
+- 简洁直观的界面设计
+- 完整的背景信息始终可见
+- 减少用户决策困惑
+
+**3. 实时响应**
+- 毫秒级点歌响应
+- 智能预加载
+- 无卡顿体验
+- 即时歌曲搜索
+
+**4. 专业与易用并重**
+- 专业级音效处理
+- 简化的操作流程
+- 不用专业音响设备也能获得好体验
+- 智能参数调整
+
+**5. 社交化娱乐**
+- 设计品质重要
+- UI引导用户享受K歌
+- 愉快的微交互
+- 分享和互动功能
+
+
+## 核心功能
+
+### 1. 智能曲库管理
+
+**用户可以做什么：**
+- 创建个性化歌单（支持丰富描述和标签）
+- 分享歌单给朋友或团队
+- 设置主题氛围、适合场景
+- 添加歌词、伴奏、音效
+- 创建子歌单（如生日会歌单、年会歌单）
+- 自定义字段（歌手、年代、语言、风格）
+
+**我们的差异化：**
+- **情境卡片：** 每个歌单都有内置空间说明使用场景和背景
+- **丰富描述：** 支持完整格式化、嵌入视频、歌词
+- **智能推荐：** 基于用户历史和场景自动推荐歌曲
+
+### 2. 多场景娱乐
+
+**用户可以做什么：**
+- 创建KTV包厢歌单（生日、年会、团建）
+- 家庭K歌模式（客厅、卧室）
+- 移动K歌（随时随地）
+- 多种视图：列表、海报、时间线
+- 按场景、氛围筛选和排序
+- 歌单模板（生日会、年会、求婚等）
+
+**我们的差异化：**
+- **场景记忆：** 系统记住每个场景的歌单偏好
+- **智能筛选：** 自然语言搜索（"适合活跃气氛的90年代歌曲"）
+- **场景状态：** 基于歌单完整度自动计算准备状态
+
+### 3. 社交互动
+
+**用户可以做什么：**
+- 在歌单中评论和讨论
+- @好友一起选歌
+- 用表情符号回应
+- 订阅歌单更新
+- 活动动态（大家最近在唱什么）
+
+**我们的差异化：**
+- **评论摘要：** AI生成长篇讨论的摘要
+- **决策跟踪：** 标记评论为最终决定（后续可查）
+- **情境保留：** 每次更新都包含完整上下文
+
+### 4. 智能通知
+
+**用户可以做什么：**
+- 邮件、APP、微信、短信通知
+- 精细偏好设置（接收哪些通知）
+- 汇总模式（批量通知）
+- 延迟通知
+
+**我们的差异化：**
+- **智能合并：** 多个更新合并为一个通知
+- **情境通知：** 包含足够信息，无需点击即可行动
+- **时间感知：** 只在合适时间发送通知
+
+### 5. 生态集成
+
+**用户可以做什么：**
+- **微信：** 分享歌单、获得通知
+- **抖音：** 同步热门歌曲、自动更新流行度
+- **网易云音乐/QQ音乐：** 导入收藏歌单
+- **百度网盘：** 备份歌单和录音
+- **日历：** 同步K歌活动安排
+
+**我们的差异化：**
+- **双向同步：** SingTech的更新会同步到连接的工具
+- **情境流动：** 集成自动拉入相关上下文
+
+### 6. 数据分析
+
+**用户可以做什么：**
+- 团队K歌频率统计
+- 歌曲受欢迎度分析
+- 活动趋势图表
+- 自定义报告（按任何维度筛选）
+- 导出数据
+
+**我们的差异化：**
+- **自动洞察：** "您的团队最近偏爱怀旧歌曲，考虑增加经典歌曲"
+- **预测分析：** "按当前趋势，下周生日会的热门歌曲"
+
+
+## 用户画像（详细）
+
+### 画像1：李老板（KTV连锁店老板）
+
+**基本情况：**
+- 年龄：35-45岁
+- 角色：运营总监 / 门店负责人
+- 公司：15家连锁KTV（500+员工）
+- 地点：全国多城市
+
+**目标：**
+- 统一管理系统（减少工具分散）
+- 确保数据安全和合规
+- 控制访问权限和使用管理
+- 降低运营成本
+
+**痛点：**
+- 各门店使用不同系统（工作分散）
+- 无法了解整体运营情况
+- 安全担忧（谁能访问什么数据？）
+- 新员工培训困难（太多系统）
+
+**核心需求：**
+- 新员工入职时，在一个地方统一管理所有工具访问权限
+- 审计时，提供完整的访问日志和审计轨迹
+- 评估新工具时，确保符合企业安全标准
+
+**SingTech功能偏好：**
+- SSO（单点登录）集成
+- 高级权限（基于角色的访问控制）
+- 审计日志（谁在什么时候做了什么）
+- 管理仪表板（全公司可视化）
+- 批量用户管理
+
+**原话：** *我需要知道谁能访问什么，如果有人离开，我需要能立即撤销权限。*
+
+
+### 画像2：张经理（活动策划师）
+
+**基本情况：**
+- 年龄：25-35岁
+- 角色：企业活动策划师
+- 公司：50-200人企业（创业公司）
+- 地点：远程办公（全国）
+
+**目标：**
+- 明确的活动规划（什么活动需要什么准备）
+- 减少在不同工具间切换
+- 专注的策划时间（不被打扰）
+- 简单、高效的工具
 
-**Pain Points:**
-- Unclear priorities (whats most important?)
-- Meetings interrupt focus time
-- Task descriptions lack technical detail
-- Slow, bloated tools
+**痛点：**
+- 优先级不明确（什么最重要？）
+- 会议打扰专注时间
+- 活动描述缺乏细节
+- 缓慢、笨重的工具
 
-**Jobs to be Done:**
-- When starting work, quickly see whats highest priority
-- When blocked, easily communicate blockers without meetings
-- When finishing a task, immediately see whats next
+**核心需求：**
+- 开始工作时，快速看到最高优先级的活动
+- 遇到困难时，不用开会就能轻松沟通问题
+- 完成一项活动后，立即看到下一步
 
-**TaskFlow Features They Love:**
-- Keyboard shortcuts (navigate without mouse)
-- GitHub integration (PRs linked to tasks)
-- Rich markdown (code blocks, technical detail)
-- Fast performance (no lag)
-- Clean, minimal UI
+**SingTech功能偏好：**
+- 键盘快捷键（不用鼠标操作）
+- 微信集成（活动链接到群聊）
+- 丰富的格式（图片、视频、详细描述）
+- 快速响应（无延迟）
+- 简洁、最小化界面
 
-**Quote:** *Just tell me what to build, give me the context, and let me focus. Dont make me hunt for information.*
+**原话：** *告诉我活动要求，给我背景信息，让我专注策划。不要让我到处找信息。*
 
 
-### Persona 3: Alex (Team Lead)
+### 画像3：王店长（KTV店长）
 
-**Demographics:**
-- Age: 30-40
-- Role: Engineering Manager / Team Lead
-- Company: 100-500 employees
-- Location: Remote (various)
-
-**Goals:**
-- Team visibility (whos working on what)
-- Identify blockers early
-- Balanced workload (no one overloaded)
-- Predictable delivery
-
-**Pain Points:**
-- Hard to see team capacity
-- Blockers discovered too late
-- Standup meetings waste time
-- Team members overloaded or underutilized
+**基本情况：**
+- 年龄：30-40岁
+- 角色：KTV店长
+- 公司：100-500人连锁企业
+- 地点：多城市远程管理
 
-**Jobs to be Done:**
-- When planning a sprint, see team capacity and assign work accordingly
-- When someone is blocked, identify it without asking in meetings
-- When reporting to leadership, show team progress clearly
+**目标：**
+- 团队可视性（谁在负责什么）
+- 早期发现问题
+- 平衡工作量（不要有人超负荷）
+- 可预测的运营效果
+
+**痛点：**
+- 难以看到团队工作情况
+- 问题发现太晚
+- 例会浪费时间
+- 团队成员工作不均
 
-**TaskFlow Features They Love:**
-- Team dashboard (everyones tasks at a glance)
-- Workload view (whos overloaded)
-- Blocked task visibility (red flags)
-- Sprint reports (velocity, burndown)
-- Comment summaries (catch up on discussions quickly)
-
-**Quote:** *I need to know if my team is on track without having to ask them individually every day.*
-
+**核心需求：**
+- 规划活动时，看到团队能力并合理分配工作
+- 有人遇到困难时，不用开会就能识别问题
+- 向管理层报告时，清晰展示团队进展
 
-## Product Roadmap (Simplified)
-
-### Already Shipped (Current Product)
-
-✅ Core task management
-✅ Projects with multiple views
-✅ Comments and @mentions
-✅ Basic integrations (Slack, GitHub)
-✅ Email notifications
-✅ Custom fields
-✅ Search
-✅ Mobile web (responsive)
-
-### In Progress (Q4 2024 - Q1 2025)
-
-🚧 **Mobile apps** (iOS and Android native)
-🚧 **SSO integration** (SAML, OAuth)
-🚧 **Advanced permissions** (role-based access control)
-🚧 **Audit logs** (compliance, enterprise)
-🚧 **Improved onboarding** (templates, tours)
-
-### Planned (Q2-Q3 2025)
-
-📅 **Dark mode** (user-requested feature)
-📅 **Time tracking** (hours logged per task)
-📅 **Resource management** (capacity planning)
-📅 **Custom workflows** (status transitions, automations)
-📅 **API v2** (better integrations)
-
-### Research Phase (Exploring)
-
-🔬 **AI features** (smart task suggestions, auto-categorization)
-🔬 **Whiteboarding** (visual collaboration)
-🔬 **Goals & OKRs** (strategic planning)
-🔬 **Portfolio management** (multiple projects)
-
-
-## Product Metrics
-
-### North Star Metric
-
-**Weekly Active Teams** - Teams that complete at least one task per week
-
-**Why this metric?**
-- Indicates real usage (not just logins)
-- Measures team collaboration (not individual)
-- Leading indicator of retention
-- Correlates with revenue
-
-**Current:** 850 weekly active teams
-**Goal (Q1 2025):** 1,200 weekly active teams
-
-
-### Product Health Metrics
-
-**Activation:**
-- **Definition:** User completes first task within 7 days of signup
-- **Current:** 45%
-- **Target:** 60%
-- **Why it matters:** Activated users are 5x more likely to become paying customers
-
-**Retention:**
-- **Definition:** % of users active in month N who are active in month N+1
-- **Current:** 65%
-- **Target:** 75%
-- **Why it matters:** Retention drives LTV (lifetime value)
-
-**Time to Value:**
-- **Definition:** Time from signup to first task completed
-- **Current:** 45 minutes (median)
-- **Target:** 15 minutes
-- **Why it matters:** Faster value = higher activation
-
-**Viral Coefficient:**
-- **Definition:** Average invites sent per user × invite acceptance rate
-- **Current:** 1.2 (barely viral)
-- **Target:** 1.5+ (truly viral)
-- **Why it matters:** Viral growth reduces CAC (customer acquisition cost)
-
-
-## Pricing & Packaging
-
-### Current Plans
-
-**Free Plan:**
-- Up to 10 users
-- Unlimited tasks and projects
-- Basic integrations
-- 7-day activity history
-- Community support
-
-**Pro Plan ($12/user/month):**
-- Unlimited users
-- Unlimited activity history
-- Advanced integrations
-- Custom fields
-- Priority support
-- Advanced reporting
-
-**Enterprise Plan (Custom pricing):**
-- Everything in Pro
-- SSO (SAML, OAuth)
-- Advanced permissions
-- Audit logs
-- Dedicated support
-- SLA guarantees
-- Custom contracts
-
-### Competitive Pricing
-
-| Tool | Entry Price | Mid-tier | Enterprise |
-|------|------------|----------|------------|
-| **TaskFlow** | Free | $12/user/mo | Custom |
-| Asana | Free (limited) | $13.49/user/mo | $30.49/user/mo |
-| Monday.com | $8/user/mo | $10/user/mo | $16/user/mo |
-| Linear | $8/user/mo | $12/user/mo | Custom |
-| ClickUp | Free | $7/user/mo | $12/user/mo |
-
-**Our strategy:** Competitive on price, better on value.
-
-
-## Technology Stack
-
-**Frontend:**
+**SingTech功能偏好：**
+- 团队仪表板（所有人工作一目了然）
+- 工作量视图（谁工作超负荷）
+- 问题标识（红色警告）
+- 活动报告（效率、趋势）
+- 评论摘要（快速了解讨论情况）
+
+**原话：** *我需要知道团队是否按计划进行，不需要每天都单独问每个人。*
+
+
+## 产品路线图（简化）
+
+### 已发布（当前产品）
+
+✅ 智能曲库管理
+✅ 多场景娱乐支持
+✅ 评论和@好友功能
+✅ 基础集成（微信、抖音）
+✅ 邮件通知
+✅ 自定义字段
+✅ 搜索功能
+✅ 移动端响应式设计
+
+### 开发中（2024年Q4 - 2025年Q1）
+
+🚧 **移动应用**（iOS和Android原生应用）
+🚧 **SSO集成**（企业单点登录）
+🚧 **高级权限**（基于角色的访问控制）
+🚧 **审计日志**（合规性、企业版）
+🚧 **改进的用户引导**（模板、导览）
+
+### 计划中（2025年Q2-Q3）
+
+📅 **深色模式**（用户请求的功能）
+📅 **K歌时长跟踪**（每首歌的演唱时长）
+📅 **资源管理**（音响设备容量规划）
+📅 **自定义工作流**（状态转换、自动化）
+📅 **API v2**（更好的集成支持）
+
+### 研究阶段（探索中）
+
+🔬 **AI功能**（智能歌曲推荐、自动分类）
+🔬 **虚拟歌房**（视觉协作）
+🔬 **目标与OKR**（战略规划）
+🔬 **多门店管理**（多个门店管理）
+
+
+## 产品指标
+
+### 北极星指标
+
+**周活跃团队** - 每周至少创建一个歌单的团队
+
+**为什么选择这个指标？**
+- 表明真实使用（不仅仅是登录）
+- 衡量团队协作（不仅仅是个人）
+- 留存的领先指标
+- 与收入相关
+
+**当前：** 850个周活跃团队
+**目标（2025年Q1）：** 1,200个周活跃团队
+
+
+### 产品健康指标
+
+**激活率：**
+- **定义：** 用户在注册7天内完成第一个歌单创建
+- **当前：** 45%
+- **目标：** 60%
+- **重要性：** 激活用户成为付费用户的可能性高5倍
+
+**留存率：**
+- **定义：** 第N月活跃的用户在第N+1月仍然活跃的百分比
+- **当前：** 65%
+- **目标：** 75%
+- **重要性：** 留存驱动LTV（终身价值）
+
+**价值实现时间：**
+- **定义：** 从注册到创建第一个歌单的时间
+- **当前：** 45分钟（中位数）
+- **目标：** 15分钟
+- **重要性：** 更快的价值实现 = 更高的激活率
+
+**病毒系数：**
+- **定义：** 每个用户平均发送邀请数 × 邀请接受率
+- **当前：** 1.2（勉强病毒性）
+- **目标：** 1.5+（真正病毒性）
+- **重要性：** 病毒增长降低CAC（客户获取成本）
+
+
+## 定价与包装
+
+### 当前方案
+
+**免费方案：**
+- 最多10个用户
+- 无限量歌单和场景
+- 基础集成功能
+- 7天活动历史
+- 社区支持
+
+**专业版（每月98元/用户）：**
+- 无限用户
+- 无限活动历史
+- 高级集成功能
+- 自定义字段
+- 优先支持
+- 高级报告分析
+
+**企业版（定制价格）：**
+- 专业版所有功能
+- SSO（企业单点登录）
+- 高级权限管理
+- 审计日志
+- 专属客户支持
+- SLA保证
+- 定制合同
+
+### 竞争性定价
+
+| 平台 | 入门价格 | 中档价格 | 企业版 |
+|------|----------|----------|--------|
+| **SingTech** | 免费 | 98元/用户/月 | 定制 |
+| 全民K歌 | 免费 | 68元/月 | 198元/月 |
+| 唱吧 | 免费 | 88元/月 | 288元/月 |
+| 酷狗K歌 | 免费 | 78元/月 | 268元/月 |
+| 天籁K歌 | 免费 | 58元/月 | 188元/月 |
+
+**我们的策略：** 价格竞争，价值领先。
+
+
+## 技术架构
+
+**前端：**
 - React + TypeScript
 - Tailwind CSS
-- React Query (data fetching)
-- WebSockets (real-time updates)
+- React Query（数据获取）
+- WebSockets（实时更新）
 
-**Backend:**
+**后端：**
 - Node.js + Express
-- PostgreSQL (primary database)
-- Redis (caching, sessions)
-- S3 (file storage)
+- PostgreSQL（主数据库）
+- Redis（缓存、会话）
+- 阿里云OSS（文件存储）
 
-**Infrastructure:**
-- AWS (hosting)
-- CloudFront (CDN)
-- Terraform (infrastructure as code)
+**基础设施：**
+- 阿里云（托管）
+- CDN（内容分发）
+- Terraform（基础设施即代码）
 
-**Mobile:**
-- React Native (iOS and Android)
-- Shared backend APIs
-
-
-## Product Principles in Action
-
-### Example: How we built Comments
-
-**Principle: Async-first**
-- Rich text editor (not just plain text)
-- Threading (organized discussions)
-- Email integration (reply via email)
-- Notification digests (not interrupt-driven)
-
-**Principle: Context over status**
-- Comments stay attached to task (never orphaned)
-- Quote specific parts of previous comments
-- Mark decisions explicitly (findable later)
-
-**Principle: Speed matters**
-- Comments load instantly (optimistic UI)
-- Keyboard shortcut to add comment (Cmd+Shift+C)
-- No page reload needed
-
-**Result:** 80% of teams use comments daily (high engagement)
+**移动端：**
+- React Native（iOS和Android）
+- 共享后端API
 
 
-## Your Projects This Quarter
+## 产品原则实践
 
-As the Senior PM for Activation & Onboarding, youre working on:
+### 示例：我们如何构建评论功能
 
-**Project 1: Onboarding Redesign**
-- Goal: Increase activation from 45% → 60%
-- Timeline: Q1 2025
-- Status: In progress
+**原则：异步优先**
+- 富文本编辑器（不仅仅是纯文本）
+- 主题化讨论（组织化的讨论）
+- 微信集成（通过微信回复）
+- 通知汇总（非打断式）
 
-**Project 2: Dark Mode**
-- Goal: Ship most-requested feature
-- Timeline: Q1 2025
-- Status: PRD complete, starting dev
+**原则：体验胜于状态**
+- 评论始终附加到歌单（永不孤立）
+- 引用前面评论的具体部分
+- 明确标记决策（后续可查）
 
-**Project 3: Template Library**
-- Goal: Faster time to value
-- Timeline: Q2 2025
-- Status: Research phase
+**原则：实时响应**
+- 评论即时加载（乐观UI）
+- 添加评论的键盘快捷键（Cmd+Shift+C）
+- 无需页面重新加载
+
+**结果：** 80%的团队每日使用评论（高参与度）
+
+
+## 您本季度的项目
+
+作为激活和引导的高级产品经理，您正在负责：
+
+**项目1：引导流程重设计**
+- 目标：激活率从45%提升到60%
+- 时间：2025年Q1
+- 状态：进行中
+
+**项目2：深色模式**
+- 目标：推出最受欢迎的功能
+- 时间：2025年Q1
+- 状态：PRD完成，开始开发
+
+**项目3：模板库**
+- 目标：更快实现价值
+- 时间：2025年Q2
+- 状态：研究阶段
 
 
 ## 产品文档
 
 所有产品文档位于：
-- **飞书：** 产品规格说明、PRD、研究资料
+- **钉钉：** 产品规格说明、PRD、研究资料
 - **Figma：** 设计图、原型、设计系统
 - **GitHub：** 技术规格说明、API文档
 - **SingTech：** 产品路线图、功能跟踪（我们自己使用！）

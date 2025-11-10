@@ -1,4 +1,4 @@
-import courseStructure from '../../../course-materials/course-structure.json'
+import courseStructure from '../../course-structure.json'
 
 // 生成导航从课程结构配置
 const level1 = courseStructure.levels.find(l => l.id === "1")!

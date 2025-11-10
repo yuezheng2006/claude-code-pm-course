@@ -18,387 +18,387 @@ description: 处理会议记录、分析研究、使用图像，并创建可重�
 **关键要点：** Claude Code 是一个文件感知、视觉能力的助手，可以每周为你节省 2-3 小时的常规 PM 文档任务。
 
 
-## Core Capabilities
+## 核心能力
 
-This module covers five essential skills:
+本模块涵盖五项基本技能：
 
-| Capability | What You'll Learn |
+| 能力 | 你将学到什么 |
 |------------|-------------------|
-| **File Reading/Writing** | Reference files with `@`, read multiple documents, create/edit files |
-| **Content Analysis** | Transform notes into action items, synthesize research, extract patterns |
-| **Image Pasting** | Paste screenshots directly into terminal with Ctrl+V (all platforms) |
-| **Visual Analysis** | Get feedback on mockups, analyze competitors, review data visualizations |
-| **Output Styles** | Create reusable formatting templates for recurring document types |
+| **文件读取/写入** | 使用 `@` 引用文件、读取多个文档、创建/编辑文件 |
+| **内容分析** | 将笔记转化为行动项、综合研究、提取模式 |
+| **图像粘贴** | 使用 Ctrl+V 直接将截图粘贴到终端（所有平台） |
+| **视觉分析** | 获得模型反馈、分析竞争对手、审核数据可视化 |
+| **输出样式** | 为重复的文档类型创建可重用的格式模板 |
 
 
-## The @ Symbol - File Reference System
+## @ 符号 - 文件引用系统
 
-The `@` symbol tells Claude which files to read, analyze, or reference.
+`@` 符号告诉 Claude 要读取、分析或引用哪些文件。
 
-### Basic Syntax
-
-```
-Read @meeting-notes.txt and summarize action items
-```
+### 基本语法
 
 ```
-Compare @competitor-a.md and @competitor-b.md
+读取 @meeting-notes.txt 并总结行动项
 ```
 
 ```
-Analyze @research/interviews/user-01.txt
+比较 @competitor-a.md 和 @competitor-b.md
 ```
 
-### Supported File Types
+```
+分析 @research/interviews/user-01.txt
+```
 
-| Format | Extensions | Common Uses |
+### 支持的文件类型
+
+| 格式 | 扩展名 | 常见用途 |
 |--------|-----------|-------------|
-| Markdown | `.md` | PRDs, documentation, notes |
-| Text | `.txt` | Meeting notes, raw data |
-| CSV | `.csv` | Survey results, metrics |
-| JSON | `.json` | API responses, structured data |
-| PDF | `.pdf` | Research papers, reports |
-| Images | `.png`, `.jpg`, `.gif` | Screenshots, mockups |
+| Markdown | `.md` | PRD、文档、笔记 |
+| Text | `.txt` | 会议记录、原始数据 |
+| CSV | `.csv` | 调查结果、指标 |
+| JSON | `.json` | API 响应、结构化数据 |
+| PDF | `.pdf` | 研究论文、报告 |
+| Images | `.png`, `.jpg`, `.gif` | 截图、模型图 |
 
-### Working with Multiple Files
+### 处理多个文件
 
-**Process batch files:**
+**批量处理文件：**
 ```
-Read all files in /meetings/ and extract action items
-```
-
-**Cross-reference documents:**
-```
-Read @prd.md and @user-research.md.
-Identify gaps where the PRD doesn't address user pain points.
+读取 /meetings/ 中的所有文件并提取行动项
 ```
 
-**Synthesize from multiple sources:**
+**交叉引用文档：**
 ```
-Read all files in /interviews/ and create @research-synthesis.md with:
-- Top 5 pain points
-- Common feature requests
-- User personas
+读取 @prd.md 和 @user-research.md。
+识别 PRD 中未解决用户痛点的空白处。
 ```
 
+**从多个来源综合：**
+```
+读取 /interviews/ 中的所有文件并创建 @research-synthesis.md，包含：
+- 前5个痛点
+- 常见功能请求
+- 用户画像
+```
 
-## Pasting Images - Critical Keyboard Shortcut
 
-### The Universal Command: Ctrl+V
+## 粘贴图像 - 关键键盘快捷键
 
-**CRITICAL: Use Ctrl+V on ALL platforms, including Mac**
+### 通用命令：Ctrl+V
 
-| Platform | Correct | Wrong |
+**重要：在所有平台上都使用 Ctrl+V，包括 Mac**
+
+| 平台 | 正确 | 错误 |
 |----------|---------|-------|
 | Mac | **Ctrl+V** | Command+V |
 | Windows | **Ctrl+V** | - |
 | Linux | **Ctrl+V** | - |
 
-**Why is Mac different?** In terminals, `Ctrl+V` is universal across all OS. `Command+V` is Mac's GUI paste and doesn't work in terminal environments.
+**为什么 Mac 不同？** 在终端环境中，`Ctrl+V` 在所有操作系统中都是通用的。`Command+V` 是 Mac 的 GUI 粘贴命令，在终端环境中不起作用。
 
-### How to Paste Images
+### 如何粘贴图像
 
-1. **Copy image to clipboard**
-   - Screenshot: `Cmd+Shift+4` (Mac) or `Win+Shift+S` (Windows)
-   - Copy from browser/Figma: `Cmd+C` (Mac) or `Ctrl+C` (Windows)
+1. **将图像复制到剪贴板**
+   - 截图：`Cmd+Shift+4` (Mac) 或 `Win+Shift+S` (Windows)
+   - 从浏览器/Figma 复制：`Cmd+C` (Mac) 或 `Ctrl+C` (Windows)
 
-2. **Paste into Claude Code**
-   - Press **Ctrl+V** in terminal
-   - Image appears in conversation
+2. **粘贴到 Claude Code**
+   - 在终端中按 **Ctrl+V**
+   - 图像出现在对话中
 
-3. **Request analysis**
+3. **请求分析**
    ```
-   Analyze this mockup and provide:
-   - UX feedback from PM perspective
-   - Technical challenges
-   - Accessibility concerns
-   - Missing user flow elements
+   分析这个模型图并提供：
+   - PM 视角的 UX 反馈
+   - 技术挑战
+   - 可访问性考虑
+   - 缺失的用户流程元素
    ```
 
-### What You Can Paste
+### 你可以粘贴什么
 
-| Category | Examples |
+| 类别 | 示例 |
 |----------|----------|
-| **Design & Product** | Figma mockups, wireframes, user journeys |
-| **Data & Analytics** | Dashboard screenshots, charts, metrics |
-| **Competitive Research** | Competitor screenshots, pricing pages |
-| **Collaboration** | Whiteboard photos, meeting diagrams |
-| **Technical** | Error messages, architecture diagrams |
+| **设计与产品** | Figma 模型图、线框图、用户旅程 |
+| **数据与分析** | 仪表板截图、图表、指标 |
+| **竞争研究** | 竞争对手截图、定价页面 |
+| **协作** | 白板照片、会议图表 |
+| **技术** | 错误消息、架构图 |
 
 
-## Content Transformation
+## 内容转换
 
-A core PM skill is communicating the same information to different audiences.
+PM 的核心技能是向不同受众传达相同的信息。
 
-### Communication Matrix
+### 沟通矩阵
 
-| Audience | Format | Tone | Focus |
+| 受众 | 格式 | 语气 | 重点 |
 |----------|--------|------|-------|
-| Engineering | Slack | Casual, technical | Implementation details |
-| Stakeholders | Email | Professional, strategic | Business outcomes |
-| Customers | Release notes | Friendly, benefit-focused | Value delivered |
-| Documentation | Notion doc | Comprehensive, structured | Complete reference |
-| Executives | Brief | Concise, metric-driven | Impact and next steps |
+| 工程 | Slack | 随意、技术性 | 实现细节 |
+| 利益相关者 | 邮件 | 专业、战略性 | 业务成果 |
+| 客户 | 发布说明 | 友好、以利益为中心 | 交付的价值 |
+| 文档 | Notion 文档 | 全面、结构化 | 完整参考 |
+| 高管 | 简报 | 简洁、以指标为驱动 | 影响和下一步 |
 
-### Example: Multi-Format Communication
-
-```
-Read @sprint-planning-notes.txt and create:
-1. @slack-update.md - Casual team announcement
-2. @stakeholder-email.md - Professional executive summary
-3. @notion-doc.md - Complete reference documentation
-```
-
-
-## Output Styles - Reusable Templates
-
-Output styles are formatting templates that eliminate repetitive formatting explanations.
-
-### Creating an Output Style
-
-**Method 1: Define the format**
-```
-Create output style Executive Briefing with:
-- Maximum 3 paragraphs
-- Paragraph 1: What happened (outcomes, metrics)
-- Paragraph 2: Why it matters (business impact)
-- Paragraph 3: What's next (forward-looking)
-- Use bullet points for metrics
-- No jargon, active voice
-```
-
-**Method 2: Show an example**
-```
-Create output style User Story formatted like:
-
-**As a** [persona]
-**I want** [capability]
-**So that** [benefit]
-
-**Acceptance Criteria:**
-- Given [context]
-  When [action]
-  Then [outcome]
-```
-
-### Using Output Styles
+### 示例：多格式沟通
 
 ```
-Convert @meeting-notes.txt to Executive Briefing style
+读取 @sprint-planning-notes.txt 并创建：
+1. @slack-update.md - 随意的团队公告
+2. @stakeholder-email.md - 专业的高管总结
+3. @notion-doc.md - 完整的参考文档
+```
+
+
+## 输出样式 - 可重用模板
+
+输出样式是消除重复格式化解释的格式模板。
+
+### 创建输出样式
+
+**方法1：定义格式**
+```
+创建高管简报输出样式，包含：
+- 最多3个段落
+- 段落1：发生了什么（结果、指标）
+- 段落2：为什么重要（业务影响）
+- 段落3：下一步（前瞻性）
+- 对指标使用项目符号
+- 无行话，主动语态
+```
+
+**方法2：显示示例**
+```
+创建格式如下的用户故事输出样式：
+
+**作为** [画像]
+**我想要** [能力]
+**以便** [利益]
+
+**验收标准：**
+- 给定 [上下文]
+  当 [行动]
+  然后 [结果]
+```
+
+### 使用输出样式
+
+```
+将 @meeting-notes.txt 转换为高管简报样式
 ```
 
 ```
-Format @sprint-work.md as Weekly Update style
+将 @sprint-work.md 格式化为每周更新样式
 ```
 
-### Essential PM Output Styles
+### 基本 PM 输出样式
 
-Build your library with these formats:
+使用这些格式构建你的库：
 
-1. **Executive Briefing** - 3-paragraph strategic summary
-2. **User Story** - As a/I want/So that with acceptance criteria
-3. **Linear/Jira Issue** - Title, description, ACs, priority, estimate
-4. **Weekly Update** - Shipped/In Progress/Blocked/Next Week
-5. **Release Notes** - Customer-facing, benefit-focused
-6. **PRD Section** - Problem/Solution/Metrics/Stories
-7. **Slack Announcement** - Casual, emoji-friendly
-8. **Stakeholder Email** - Professional, context-rich
+1. **高管简报** - 3段式战略总结
+2. **用户故事** - 作为/我想要/以便 并带有验收标准
+3. **Linear/Jira 问题** - 标题、描述、验收标准、优先级、估算
+4. **每周更新** - 已发布/进行中/受阻/下周计划
+5. **发布说明** - 面向客户、以利益为中心
+6. **PRD 部分** - 问题/解决方案/指标/故事
+7. **Slack 公告** - 随意、友好表情符号
+8. **利益相关者邮件** - 专业、内容丰富
 
 
-## Real-World PM Workflows
+## 真实 PM 工作流程
 
-### Meeting Processing (Weekly)
+### 会议处理（每周）
 
-**Without Claude Code:** 35 minutes
-- Review notes: 10 min
-- Extract action items: 15 min
-- Organize by owner: 5 min
-- Format for distribution: 5 min
+**不使用 Claude Code：** 35分钟
+- 审查笔记：10分钟
+- 提取行动项：15分钟
+- 按负责人组织：5分钟
+- 格式化以便分发：5分钟
 
-**With Claude Code:** 2 minutes
+**使用 Claude Code：** 2分钟
 ```
-Process all files in /meetings/today/ and create @action-items-summary.md with:
-- Table of action items organized by owner
-- Priority and due date
-- Grouped by meeting source
-```
-
-**Time saved:** 33 min/week = 2.75 hours/month
-
-### User Research Synthesis
-
-**Without Claude Code:** 2 hours 40 minutes
-- Read 8 transcripts: 60 min
-- Highlight themes: 30 min
-- Extract quotes: 20 min
-- Organize findings: 20 min
-- Write synthesis: 30 min
-
-**With Claude Code:** 5 minutes
-```
-Read all files in /user-interviews/ and create @research-synthesis.md with:
-- Top 5 pain points (mentioned by 3+ users)
-- Supporting quotes for each finding
-- Feature requests ranked by frequency
-- Refined personas with real data
-- Recommended next steps
+处理 /meetings/today/ 中的所有文件并创建 @action-items-summary.md，包含：
+- 按负责人组织的行动项表
+- 优先级和截止日期
+- 按会议来源分组
 ```
 
-**Time saved:** 2.5 hours per research cycle
+**节省时间：** 33分钟/周 = 2.75小时/月
 
-### Stakeholder Communication
+### 用户研究综合
 
-**Without Claude Code:** 45 minutes
-- Draft Slack message: 10 min
-- Write stakeholder email: 15 min
-- Create Notion doc: 15 min
-- Ensure consistency: 5 min
+**不使用 Claude Code：** 2小时40分钟
+- 阅读8份记录：60分钟
+- 突出主题：30分钟
+- 提取引用：20分钟
+- 组织发现：20分钟
+- 撰写综合：30分钟
 
-**With Claude Code:** 3 minutes
+**使用 Claude Code：** 5分钟
 ```
-Read @product-sync-notes.md and create three formats:
-
-1. Slack Update - Casual, emoji-friendly, celebrate wins
-2. Stakeholder Email - Business outcomes, metrics, risks
-3. Notion Document - Complete reference with dependencies
-```
-
-**Time saved:** 42 min/sprint = 1.4 hours/month
-
-
-## Best Practices
-
-### Do:
-
-**Use @ references explicitly**
-```
-Good: Read @user-research.md and summarize pain points
-Better: Read @user-research.md and create @pain-points-summary.md
+读取 /user-interviews/ 中的所有文件并创建 @research-synthesis.md，包含：
+- 前5个痛点（3+用户提及）
+- 每个发现的支持引用
+- 按频率排序的功能请求
+- 带有真实数据的精炼画像
+- 推荐的下一步
 ```
 
-**Request structured outputs**
-```
-Create table with: Action Item | Owner | Due Date | Priority
-```
+**节省时间：** 每个研究周期2.5小时
 
-**Provide context for analysis**
-```
-We're deciding between Feature A and B for Q2.
-Read @user-research.md and recommend which addresses more critical pain points.
-```
+### 利益相关者沟通
 
-**Combine multiple operations**
+**不使用 Claude Code：** 45分钟
+- 起草 Slack 消息：10分钟
+- 撰写利益相关者邮件：15分钟
+- 创建 Notion 文档：15分钟
+- 确保一致性：5分钟
+
+**使用 Claude Code：** 3分钟
 ```
-Read all /interviews/, synthesize findings, create @executive-summary.md and @detailed-insights.md
-```
+读取 @product-sync-notes.md 并创建三种格式：
 
-**Build output style library gradually**
-- Create styles as you encounter repetitive needs
-- Don't create all at once
-
-
-### Don't:
-
-**Forget the @ symbol**
-```
-Bad: Summarize meeting-notes.txt
-Good: Summarize @meeting-notes.txt
+1. Slack 更新 - 随意、友好表情符号、庆祝胜利
+2. 利益相关者邮件 - 业务成果、指标、风险
+3. Notion 文档 - 带有依赖项的完整参考
 ```
 
-**Use Command+V on Mac**
-- Always use Ctrl+V for images (all platforms)
-
-**Expect Claude to remember unsaved work**
-- Save files with filenames for later reference
-
-**Paste sensitive information**
-- Redact confidential data from screenshots first
-
-**Create overly complex styles**
-- Keep simple and focused
-- Better: 10 simple styles than 1 complicated one
+**节省时间：** 42分钟/冲刺 = 1.4小时/月
 
 
-## Troubleshooting
+## 最佳实践
 
-**Command+V doesn't work on Mac**
-- Solution: Use **Ctrl+V** instead
-- Why: Terminals use Ctrl shortcuts across all platforms
+### 要做：
 
-**Claude can't find referenced file**
-- Check filename spelling (case-sensitive)
-- Verify file path: `What files are in /meetings/?`
-- Ask Claude: `Does @meeting-notes.txt exist?`
-
-**Image pasted but no analysis**
-- Verify image appeared in conversation
-- Try different format (.png or .jpg)
-- Check size (keep under 10MB)
-- Re-paste with Ctrl+V
-
-**Output style not formatting correctly**
-- Show concrete example of desired format
-- Be specific about structure
-- Test and refine iteratively
-- Start simple, add complexity gradually
-
-**File created but not visible in Obsidian**
-- Refresh Obsidian
-- Check it's not in hidden .claude/ folder
-- Look in Finder/Explorer
-- Ask Claude: `Where did you save the file?`
-
-
-## What's Next?
-
-**Module 1.4: Agents for Parallel Work**
-
-Learn to clone Claude for simultaneous tasks:
-- Process 10 meeting notes in parallel
-- Research 5 competitors simultaneously
-- Build multi-agent workflows
-- Do 5 hours of work in 30 minutes
-
-Interactive track: Type `/start-1-4`
-
-
-## Quick Reference
-
-**Essential Commands:**
-- `@filename` - Reference a file
-- `Ctrl+V` - Paste image (all platforms)
-- `Read @file and create @output` - Basic workflow
-
-**File Operations:**
+**明确使用 @ 引用**
 ```
-Single: @meeting-notes.txt
-Multiple: @file1.txt, @file2.txt, @file3.txt
-Folder: All files in /meetings/
+好：读取 @user-research.md 并总结痛点
+更好：读取 @user-research.md 并创建 @pain-points-summary.md
 ```
 
-**Content Transformation:**
+**请求结构化输出**
 ```
-Transform @source.txt into:
-1. @casual-slack.md - Team-friendly
-2. @formal-email.md - Stakeholder-appropriate
-3. @comprehensive-doc.md - Complete reference
+创建表：行动项 | 负责人 | 截止日期 | 优先级
 ```
 
-**Output Styles:**
+**为分析提供上下文**
 ```
-Create: Create output style [Name] with rules: [format]
-Use: Format @content.txt in [Name] style
+我们正在决定Q2使用功能A还是B。
+读取 @user-research.md 并推荐哪个解决更关键的痛点。
 ```
 
-**Image Analysis:**
-1. Copy image (Cmd+Shift+4 / Win+Shift+S)
-2. Paste with Ctrl+V
-3. Request analysis
+**组合多个操作**
+```
+读取所有 /interviews/，综合发现，创建 @executive-summary.md 和 @detailed-insights.md
+```
+
+**逐步构建输出样式库**
+- 在遇到重复需求时创建样式
+- 不要一次性创建所有样式
 
 
-## Resources
+### 不要做：
 
-Practice these workflows during the interactive module (`/start-1-3`) to build muscle memory for file references, image pasting, and output styles.
+**忘记 @ 符号**
+```
+坏：总结 meeting-notes.txt
+好：总结 @meeting-notes.txt
+```
+
+**在 Mac 上使用 Command+V**
+- 图像始终使用 Ctrl+V（所有平台）
+
+**期望 Claude 记住未保存的工作**
+- 用文件名保存文件以供后续引用
+
+**粘贴敏感信息**
+- 先从截图中编辑机密数据
+
+**创建过于复杂的样式**
+- 保持简单和专注
+- 更好：10个简单样式而不是1个复杂的
+
+
+## 故障排除
+
+**Command+V 在 Mac 上不起作用**
+- 解决方案：改用 **Ctrl+V**
+- 原因：终端在所有平台上都使用 Ctrl 快捷键
+
+**Claude 找不到引用的文件**
+- 检查文件名拼写（区分大小写）
+- 验证文件路径：`/meetings/ 中有什么文件？`
+- 询问 Claude：`@meeting-notes.txt 存在吗？`
+
+**图像粘贴了但没有分析**
+- 验证图像出现在对话中
+- 尝试不同格式（.png 或 .jpg）
+- 检查大小（保持在10MB以下）
+- 用 Ctrl+V 重新粘贴
+
+**输出样式格式不正确**
+- 显示所需格式的具体示例
+- 具体说明结构
+- 迭代测试和改进
+- 从简单开始，逐步增加复杂性
+
+**文件创建了但在 Obsidian 中不可见**
+- 刷新 Obsidian
+- 检查不在隐藏的 .claude/ 文件夹中
+- 在 Finder/Explorer 中查找
+- 询问 Claude：`你把文件保存在哪里了？`
+
+
+## 下一步是什么？
+
+**模块1.4：并行工作代理**
+
+学习克隆 Claude 进行同时任务：
+- 并行处理10个会议记录
+- 同时研究5个竞争对手
+- 构建多代理工作流程
+- 30分钟完成5小时的工作
+
+互动模块：输入 `/start-1-4`
+
+
+## 快速参考
+
+**基本命令：**
+- `@filename` - 引用文件
+- `Ctrl+V` - 粘贴图像（所有平台）
+- `读取 @file 并创建 @output` - 基本工作流程
+
+**文件操作：**
+```
+单个：@meeting-notes.txt
+多个：@file1.txt, @file2.txt, @file3.txt
+文件夹：/meetings/ 中的所有文件
+```
+
+**内容转换：**
+```
+将 @source.txt 转换为：
+1. @casual-slack.md - 团队友好
+2. @formal-email.md - 利益相关者适当
+3. @comprehensive-doc.md - 完整参考
+```
+
+**输出样式：**
+```
+创建：创建输出样式 [名称] 规则：[格式]
+使用：将 @content.txt 格式化为 [名称] 样式
+```
+
+**图像分析：**
+1. 复制图像（Cmd+Shift+4 / Win+Shift+S）
+2. 用 Ctrl+V 粘贴
+3. 请求分析
+
+
+## 资源
+
+在互动模块（`/start-1-3`）中练习这些工作流程，为文件引用、图像粘贴和输出样式建立肌肉记忆。
 
 
 ---

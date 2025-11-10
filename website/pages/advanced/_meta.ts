@@ -1,6 +1,6 @@
-import courseStructure from '../../../course-materials/course-structure.json'
+import courseStructure from '../../course-structure.json'
 
-// Generate navigation from course structure config
+// 从课程结构配置生成导航
 const level2 = courseStructure.levels.find(l => l.id === "2")!
 const meta: Record<string, string> = {}
 

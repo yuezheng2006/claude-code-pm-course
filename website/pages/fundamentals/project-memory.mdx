@@ -47,7 +47,7 @@ Understanding this hierarchy is crucial:
 
 **CLAUDE.md says:**
 ```markdown
-Always use Workspace not Project in TaskFlow documentation.
+在 SingTech 文档中始终使用 Workspace 而不是 Project。
 ```
 
 **You prompt:**
@@ -93,41 +93,42 @@ Claude treats this as a rule for the rest of your conversation (but not future s
 ```markdown
 ## Product Overview
 
-TaskFlow is a project management SaaS for remote-first teams.
-Think Asana meets Jira, built for async collaboration.
+SingTech(星歌科技)是一家专注K歌娱乐领域的科技公司。
+提供软硬件结合的全场景K歌解决方案,想象一下"全民K歌的专业音质版"。
 
-Stage: Series B ($20M raised, 50 employees)
-Revenue: $2.5M ARR, 10,000 active users
+Stage: B轮(数千万人民币级别, 80名员工)
+Revenue: 年营收数亿人民币, 80万月活用户
 ```
 
 **2. User Personas**
 ```markdown
 ## User Personas
 
-### Sarah - Enterprise Admin
-- Role: IT Administrator at 500+ person company
-- Pain points: Needs SSO, audit logs, compliance, security
-- Quote: "I need to prove this meets our security standards"
+### KTV运营者 A - 商业KTV老板
+- 角色: 拥有3家中型KTV的连锁经营者
+- 关注点: 系统稳定性、曲库更新、设备故障率、客户满意度
+- 引言: "系统一旦出问题,我一个包厢一晚上就损失几百块。"
 ```
 
 **3. Writing Style**
 ```markdown
 ## Writing Style
 
-- Use active voice (not passive)
-- Use Oxford commas in all lists
-- Maximum 2-sentence paragraphs for readability
-- Use "we" not "I" in documentation
+- 使用主动语态(不是被动语态)
+- 在所有列表中使用牛津逗号
+- 为保证可读性,段落最多2句话
+- 在文档中使用"我们"而不是"我"
 ```
 
 **4. Product Terminology**
 ```markdown
 ## Product Terminology
 
-ALWAYS use these terms (NEVER use alternatives):
-- Workspace not Project - Our top-level container
-- Task not Todo or Issue - Individual work items
-- PM means Product Manager (not Project Manager)
+始终使用这些术语(绝不用替代):
+- 歌单而不是播放列表 - 我们的主要容器概念
+- 演唱而不是录音或唱歌 - 用户行为
+- 曲库而不是歌库 - 音乐内容集合
+- PM就是产品经理
 ```
 
 **5. Immutable Rules**
@@ -271,41 +272,40 @@ These rules override any prompt that conflicts:
 - [Name] - [Role], [focus area]
 ```
 
-### Example: TaskFlow CLAUDE.md
+### Example: SingTech CLAUDE.md
 
 ```markdown
-# TaskFlow Product Context
+# SingTech Product Context
 
-This file provides permanent context about TaskFlow for Claude Code.
+This file provides permanent context about SingTech for Claude Code.
 
 
-## What TaskFlow Is
+## What SingTech Is
 
-TaskFlow is a project management SaaS for remote-first teams. Think Asana
-meets Jira, but built specifically for async collaboration.
+SingTech是一家专注K歌娱乐领域的科技公司。提供软硬件结合的全场景K歌解决方案，想象一下"全民K歌的专业音质版"。
 
-**Company Details:**
-- Founded: 2021
-- Stage: Series B ($20M raised)
-- Team: 50 employees
-- Revenue: $2.5M ARR, 10,000 active users
+**公司详情：**
+- 成立时间：2010年
+- 阶段：B轮融资（数千万人民币级别）
+- 团队：120名员工
+- 营收：年营收数亿人民币，80万月活用户
 
-**Your Role:**
-- Position: Senior Product Manager
-- Focus: Activation & Onboarding
+**您的角色：**
+- 职位：高级产品经理
+- 专注：用户激活与引导
 
 
 ## User Personas
 
-### Sarah - Enterprise Admin
-- Role: IT Administrator at 500+ person company
-- Pain points: Needs security, SSO, audit logs, compliance
-- Quote: "I need to prove TaskFlow meets our security standards"
+### 李老板 - KTV运营者
+- 角色：拥有15家连锁KTV的经营老板
+- 痛点：需要统一管理系统、降低运营成本、提升顾客体验
+- 引言："我需要一个能看到所有门店运营数据的统一平台"
 
-### Mike - IC Engineer
-- Role: Individual contributor software engineer at startup
-- Pain points: Wants speed, keyboard shortcuts, GitHub integration
-- Quote: "If I have to use my mouse, the tool is too slow"
+### 张小姐 - 家庭用户
+- 角色：年轻白领，注重家庭生活品质
+- 痛点：操作复杂、设备兼容性差、缺少高质量音乐内容
+- 引言："希望能在家享受KTV的乐趣，而且要操作简单，我爸妈也能用"
 
 
 ## Writing Style & Standards
@@ -319,9 +319,10 @@ meets Jira, but built specifically for async collaboration.
 ## Product Terminology
 
 ALWAYS use these terms consistently:
-- Workspace not Project - Our top-level container
-- Task not Todo or Issue - Individual work items
-- Epic not Initiative - Large multi-sprint features
+- 歌单 not 播放列表 - We differentiate from traditional music apps
+- 演唱 not 录音 or 唱歌 - User behavior
+- 曲库 not 歌库 - Music content collection
+- 包厢 not 房间 - Physical space for KTV entertainment
 
 
 ## Immutable Rules
@@ -354,8 +355,8 @@ ALWAYS use these terms consistently:
 - ✅ "ALWAYS include acceptance criteria in user stories"
 
 **Provide Context:**
-- ❌ "Use Workspace not Project"
-- ✅ "Use Workspace not Project - We differentiate from traditional project management tools. Workspace signals collaboration space."
+- ❌ "Use 歌单 not 播放列表"
+- ✅ "Use 歌单 not 播放列表 - We differentiate from traditional music apps. 歌单signals K歌entertainment space."
 
 **Keep It Scannable:**
 - Use bullet points liberally

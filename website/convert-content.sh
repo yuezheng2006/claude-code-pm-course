@@ -41,22 +41,22 @@ echo ""
 echo "📦 Converting company-context files..."
 convert_to_mdx "$COURSE_ROOT/company-context/COMPANY.md" \
     "$PAGES_DIR/company-context/overview.mdx" \
-    "TaskFlow Company Overview" \
-    "Welcome to TaskFlow - your fictional company throughout the Claude Code PM Course"
+    "SingTech Company Overview" \
+    "Welcome to SingTech - your fictional company throughout the Claude Code PM Course"
 
 convert_to_mdx "$COURSE_ROOT/company-context/PRODUCT.md" \
     "$PAGES_DIR/company-context/product.mdx" \
-    "TaskFlow Product Overview" \
-    "Your complete guide to the TaskFlow product"
+    "SingTech Product Overview" \
+    "Your complete guide to the SingTech product"
 
 convert_to_mdx "$COURSE_ROOT/company-context/PERSONAS.md" \
     "$PAGES_DIR/company-context/personas.mdx" \
-    "TaskFlow User Personas" \
-    "Deep dive into who uses TaskFlow and why"
+    "SingTech User Personas" \
+    "Deep dive into who uses SingTech and why"
 
 convert_to_mdx "$COURSE_ROOT/company-context/COMPETITIVE.md" \
     "$PAGES_DIR/company-context/competitive.mdx" \
-    "TaskFlow Competitive Landscape" \
+    "SingTech Competitive Landscape" \
     "Understanding our market position and competitors"
 
 # Convert Getting Started modules
@@ -82,8 +82,8 @@ echo ""
 echo "📦 Converting fundamentals modules..."
 convert_to_mdx "$COURSE_ROOT/lesson-modules/1.1-welcome/REFERENCE_GUIDE.md" \
     "$PAGES_DIR/fundamentals/welcome.mdx" \
-    "1.1: Welcome to TaskFlow" \
-    "Introduction to TaskFlow and the course project - your fictional company for hands-on learning"
+    "1.1: Welcome to SingTech" \
+    "Introduction to SingTech and the course project - your fictional company for hands-on learning"
 
 convert_to_mdx "$COURSE_ROOT/lesson-modules/1.2-visualizing-files/REFERENCE_GUIDE.md" \
     "$PAGES_DIR/fundamentals/visualizing-files.mdx" \

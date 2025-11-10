@@ -56,7 +56,7 @@ vercel --prod
 ```
 website/
 ├── pages/               # 所有内容页面 (MDX)
-│   ├── company-context/ # TaskFlow 公司信息
+│   ├── company-context/ # SingTech 公司信息
 │   ├── getting-started/ # 模块 0.0-0.2
 │   ├── fundamentals/    # 模块 1.1-1.7
 │   ├── advanced/        # 模块 2.1-2.3
@@ -88,7 +88,7 @@ website/
 
 ## 链接
 
-- **在线网站:** TBD (将部署到 Vercel)
+- **在线网站:** [部署后更新]
 - **课程仓库:** https://github.com/yuezheng2006/claude-code-pm-course
 - **Nextra 文档:** https://nextra.site
 - **Pagefind 文档:** https://pagefind.app
