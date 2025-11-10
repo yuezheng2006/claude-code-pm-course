@@ -21,6 +21,7 @@ node_modules/
 !course-materials/course-structure.json
 !website/course-structure.json
 !website/vercel.json
+!vercel.json
 *.png
 !website/public/**/*.png
 

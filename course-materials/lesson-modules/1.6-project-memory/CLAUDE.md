@@ -154,37 +154,37 @@ CLAUDE.md 是一个让 Claude 永久记住你的产品上下文的文件。你�
 ## Product Context
 
 **What is SingTech?**
-SingTech is a project management SaaS that combines the simplicity of Asana with the power of Jira, designed specifically for remote teams. Think: "Asana meets Jira for remote teams."
+SingTech是一家专注K歌娱乐领域的科技公司。提供软硬件结合的全场景K歌解决方案，想象一下"全民K歌的专业音质版"。
 
 **Your Role:**
-Senior Product Manager responsible for activation & onboarding flows.
+高级产品经理，负责用户激活与引导
 
-**Company Stage:**
-- Series B startup
-- $20M raised
-- 50 employees
-- $2.5M ARR
-- 10,000 active users
+**公司详情：**
+- B轮创业公司
+- 数千万人民币级别融资
+- 120名员工
+- 年营收数亿人民币
+- 80万月活用户
 
 ## User Personas
 
-**Sarah - Enterprise Admin**
-- Role: IT Admin at 500-person company
-- Cares about: Security, SSO, audit logs, compliance
-- Pain points: Complex setup processes, unclear security features
-- Quote: "I need to know this is secure before I can approve it."
+**李总 A - KTV运营总监**
+- 角色：15家连锁KTV的运营总监
+- 关注点：系统稳定性、设备故障率、营业数据统计、客户满意度
+- 痛点：多店管理复杂、数据汇总困难、设备维护成本高
+- 引言："我需要一个能看到所有门店运营数据的统一平台"
 
-**Mike - IC Engineer**
-- Role: Individual contributor on 8-person engineering team
-- Cares about: Speed, keyboard shortcuts, GitHub integration
-- Pain points: Context switching, slow tools, too many clicks
-- Quote: "If it takes more than 3 clicks, I'm not doing it."
+**小王 B - 年轻K歌用户**
+- 角色：24岁互联网公司运营，重度K歌爱好者
+- 关注点：音质评分、歌曲推荐、社交互动、暗色模式
+- 痛点：音质不佳、推荐不准、界面刺眼
+- 引言："AI评分和专业音质是我选择你们的主要原因"
 
-**Alex - Team Lead**
-- Role: Engineering manager of 12-person team
-- Cares about: Team visibility, reporting, workload balance
-- Pain points: Can't see team capacity, hard to track progress
-- Quote: "I need to know who's overloaded before they burn out."
+**陈老师 C - 声乐培训老师**
+- 角色：音乐学院教师，管理8个学生班级
+- 关注点：教学进度跟踪、学生练习分析、AI评分教育价值
+- 痛点：手动统计学生进度繁琐、缺乏数据化教学工具
+- 引言："我希望能看到每个学生的音准进步轨迹"
 
 ## Writing Style
 
@@ -204,24 +204,25 @@ Senior Product Manager responsible for activation & onboarding flows.
 ## Product Terminology
 
 **Required Terms:**
-- "Workspace" (NOT "Project" - this is our main container concept)
-- "Task" (NOT "Todo" or "Issue")
-- "Epic" (NOT "Initiative" or "Theme")
-- "PM" = Product Manager (not Project Manager)
+- "歌单" (NOT "播放列表" - 我们的主要容器概念)
+- "演唱" (NOT "录音" or "唱歌" - 用户行为)
+- "曲库" (NOT "歌库" - 音乐内容集合)
+- "包厢" (NOT "房间" - KTV娱乐空间)
+- "PM" = 产品经理 (not Project Manager)
 
 ## Team Reference
 
 **Leadership:**
-- 陈思敏 (CEO) - 前 Atlassian 产品经理
-- 张伟 (CTO) - 前 Google 工程师
-- Alex Kim (Head of Design) - Previously at Figma
-- You (Senior PM, Activation & Onboarding)
+- CEO A - 公司创始人，负责愿景和融资
+- CTO A - 负责技术架构和工程团队
+- 设计主管 A - 负责所有UX和视觉设计
+- 你 (高级产品经理，负责用户激活与引导)
 
 **Tools We Use:**
-- Linear (for engineering task management)
+- Jira (for engineering task management)
 - Figma (for design work)
 - 飞书文档 (for documentation)
-- 企业微信 (for team communication)
+- 飞书 (for team communication)
 
 ## Immutable Rules
 
@@ -229,7 +230,7 @@ Senior Product Manager responsible for activation & onboarding flows.
 - Include acceptance criteria in user stories
 - Reference user research when writing PRDs
 - Consider accessibility in all feature specs
-- Use the correct terminology (Workspace not Project, etc.)
+- Use the correct terminology (歌单 not 播放列表, 演唱 not 录音, etc.)
 
 **NEVER:**
 - Write PRDs without user research backing
@@ -277,47 +278,47 @@ Senior Product Manager responsible for activation & onboarding flows.
 **操作:** 阅读 SINGTECH_CLAUDE.md,然后遵循所有规则编写用户故事:
 
 ```markdown
-## User Story: Dark Mode for Workspace Views
+## User Story: 暗色模式 for 演唱界面
 
-**As** Sarah (Enterprise Admin),
-**I want** to enable dark mode for all Workspace views,
-**So that** my team can work comfortably in low-light environments and reduce eye strain during long work sessions.
+**As** 小王 B (年轻K歌用户),
+**I want** to enable dark mode for all karaoke singing interfaces,
+**So that** I can practice singing comfortably in low-light environments and reduce eye strain during evening practice sessions.
 
 **Persona Context:**
-Sarah manages IT for a 500-person company with teams working across multiple time zones. Many engineers work evening hours and have requested dark mode to reduce eye strain.
+小王 B is a 24-year-old internet company employee who practices singing every evening. Many young users sing at night or in dimly lit rooms and have requested dark mode to reduce eye strain during extended practice sessions.
 
 **Acceptance Criteria:**
 
-1. **Dark Mode Toggle**
+1. **暗色模式切换**
    - User can toggle dark mode from Settings > Appearance
    - Choice persists across sessions and devices
-   - Takes effect immediately without page reload
+   - Takes effect immediately without app restart
 
-2. **Workspace Coverage**
-   - Dark mode applies to all Workspace views (board, list, timeline)
-   - All Task cards use dark theme colors
-   - Epic headers maintain readability in dark mode
+2. **演唱界面覆盖**
+   - Dark mode applies to all singing interfaces (song selection, lyrics display, scoring)
+   - All 歌单 cards use dark theme colors
+   - 曲库 headers maintain readability in dark mode
 
-3. **Accessibility**
+3. **可访问性**
    - Color contrast meets WCAG AA standards in dark mode
    - Focus indicators remain visible on dark backgrounds
    - Screen readers announce theme changes
 
-4. **Mobile Support**
+4. **移动端支持**
    - Dark mode works on iOS and Android apps
    - Respects system dark mode preference by default
    - Users can override system preference in app settings
 
 **Why This Matters:**
-Enterprise admins like Sarah need to ensure their teams have comfortable working conditions. Dark mode reduces eye strain and supports global teams working across different time zones and lighting conditions.
+Young karaoke users like 小王 B need comfortable practicing environments. Dark mode reduces eye strain and supports users who practice singing during evening hours or in low-light conditions.
 ```
 
 **说:**
 
 "注意我在那里做了什么 - 而你 **从未明确要求** 任何这些内容:
 
-1. ✅ 使用了 \"Workspace\" 和 \"Task\" 和 \"Epic\"(而不是 Project/Todo/Initiative) - **术语规则**
-2. ✅ 为 Sarah,企业管理员角色编写 - **来自 CLAUDE.md 的角色**
+1. ✅ 使用了 \"歌单\" 和 \"演唱\" 和 \"曲库\"(而不是 播放列表/录音/歌库) - **术语规则**
+2. ✅ 为 小王 B,年轻K歌用户角色编写 - **来自 CLAUDE.md 的角色**
 3. ✅ 包含详细的验收标准 - **不可变规则**
 4. ✅ 全程使用牛津逗号 - **写作风格**
 5. ✅ 使用主动语态(\"用户可以切换\" 而不是 \"深色模式可以被切换\") - **写作风格**
