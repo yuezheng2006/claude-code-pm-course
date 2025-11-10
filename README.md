@@ -1,81 +1,81 @@
-# Claude Code PM Course
+# SingTech K歌产品管理课程
 
-An interactive course teaching Product Managers how to use Claude Code effectively for their daily work.
+一个交互式课程，教导产品经理如何有效使用Claude Code进行日常工作。
 
-## Course Structure
+## 课程结构
 
-### Module 0: Getting Started
-- **0.0 Introduction** - Course overview and what you'll learn
-- **0.1 Installation** - Install Claude Code and prerequisites
-- **0.2 Start & Clone** - Launch Claude Code and clone this course
+### 模块0：入门指南
+- **0.0 简介** - 课程概览和您将学到的内容
+- **0.1 安装** - 安装Claude Code和前置条件
+- **0.2 开始和克隆** - 启动Claude Code并克隆本课程
 
-### Module 1: Claude Code Fundamentals
-- **1.1 Welcome** - Introduction to TaskFlow and the course project
-- **1.2 Visualizing Files** - Set up Obsidian for file visualization
-- **1.3 First Tasks** - Process meeting notes, analyze research, work with images
-- **1.4 Agents** - Use parallel agents for complex workflows
-- **1.5 Custom Sub-Agents** - Create specialized AI personas for reviews
-- **1.6 Project Memory** - Use CLAUDE.md for context and instructions
-- **1.7 Claude Code Navigation** - Master file operations and searches
+### 模块1：Claude Code基础知识
+- **1.1 欢迎** - SingTech介绍和课程项目
+- **1.2 文件可视化** - 设置Obsidian进行文件可视化
+- **1.3 首次任务** - 处理会议记录、分析研究、使用图片
+- **1.4 代理** - 使用并行代理处理复杂工作流
+- **1.5 自定义子代理** - 创建专门的AI角色进行评审
+- **1.6 项目记忆** - 使用CLAUDE.md提供上下文和指令
+- **1.7 Claude Code导航** - 掌握文件操作和搜索
 
-### Module 2: Advanced PM Scenarios
-- **2.1 Write a PRD** - Partner with AI to create product requirements
-- **2.2 Analyze Data** - Data-driven product decisions
-- **2.3 Product Strategy** - Strategic planning and competitive analysis
+### 模块2：高级PM场景
+- **2.1 撰写PRD** - 与AI合作创建产品需求
+- **2.2 数据分析** - 数据驱动的产品决策
+- **2.3 产品策略** - 战略规划和竞争分析
 
-## How to Use This Course
+## 如何使用本课程
 
-### Interactive Track (Recommended)
-1. Clone this repository
-2. Navigate to the course materials: `cd course-materials`
-3. Start Claude Code: `claude`
-4. Run `/start-1-1` to begin the first lesson
-5. Follow the guided, hands-on lessons
+### 交互式学习路径（推荐）
+1. 克隆此仓库
+2. 进入课程材料目录：`cd course-materials`
+3. 启动Claude Code：`claude`
+4. 运行 `/start-1-1` 开始第一课
+5. 跟随指导性的动手练习
 
-### Reference Track
-Each module has a `REFERENCE_GUIDE.md` that can be read standalone for quick reference.
+### 参考学习路径
+每个模块都有独立的 `REFERENCE_GUIDE.md` 文件，可单独阅读作为快速参考。
 
-## ⚠️ Important: Instructions for Claude Code
+## ⚠️ 重要：Claude Code使用说明
 
-**When you first open this repository in Claude Code:**
-- ❌ **Do NOT install npm dependencies** or run `npm install` yet
-- ❌ **Do NOT build the website** or run `npm run build`
-- ❌ **Do NOT make any setup changes** without being asked
+**当您首次在Claude Code中打开此仓库时：**
+- ❌ **请勿安装npm依赖** 或运行 `npm install`
+- ❌ **请勿构建网站** 或运行 `npm run build`
+- ❌ **请勿在未被要求时进行任何设置更改**
 
-**Instead:**
-- 📖 Read the course content as guided
-- 🎯 Wait for explicit instructions in each module
-- 💬 Ask the user what they'd like to do next
+**而是：**
+- 📖 按照指导阅读课程内容
+- 🎯 等待每个模块中的明确指示
+- 💬 询问用户下一步想要做什么
 
-The course is self-contained - we'll handle setup only when needed. Your job is to guide the user through the learning experience interactively.
+本课程是自包含的 - 我们只会在需要时处理设置。您的任务是交互式地引导用户完成学习体验。
 
-## What You'll Learn
+## 您将学到什么
 
-- **File Operations** - Read, search, organize, and manage PM documents
-- **@-Mentions** - Provide full context to Claude for better outputs
-- **Agents** - Run parallel workflows and get multi-perspective feedback
-- **Custom Sub-Agents** - Create specialized reviewers (engineer, executive, UX)
-- **Project Memory** - Use CLAUDE.md to customize Claude's behavior
-- **Real PM Workflows** - Write PRDs, analyze data, develop strategy
+- **文件操作** - 阅读、搜索、组织和管理PM文档
+- **@-提及** - 为Claude提供完整上下文以获得更好输出
+- **代理** - 运行并行工作流并获得多视角反馈
+- **自定义子代理** - 创建专门的评审员（工程师、高管、UX）
+- **项目记忆** - 使用CLAUDE.md自定义Claude的行为
+- **真实PM工作流** - 撰写PRD、分析数据、制定策略
 
-## Prerequisites
+## 前置条件
 
-- Basic familiarity with product management
-- Willingness to learn command-line basics
-- Mac, Windows, or Linux computer
+- 基本的产品管理知识
+- 愿意学习命令行基础知识
+- Mac、Windows或Linux计算机
 
-## About This Course
+## 关于本课程
 
-This course teaches PMs how to use Claude Code as a thinking partner, not just an automation tool. You'll learn to:
-- Work faster without sacrificing quality
-- Get multi-perspective feedback instantly
-- Process research and data efficiently
-- Write better documents with AI assistance
+本课程教导PM如何将Claude Code作为思考伙伴使用，而不仅仅是自动化工具。您将学到：
+- 在不牺牲质量的前提下工作得更快
+- 即时获得多视角反馈
+- 高效处理研究和数据
+- 使用AI协助撰写更好的文档
 
-**Time to Complete:** ~4-6 hours for full interactive track
+**完成时间：** 完整交互式学习路径约4-6小时
 
-## License
+## 许可证
 
-This work is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+本作品采用 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) 许可证。
 
-Copyright © 2025 Carl Vellotti. You may view and share this course content with attribution, but commercial use and modifications are not permitted.
+版权 © 2025 Carl Vellotti。您可以查看和分享本课程内容（需注明出处），但不允许商业使用和修改。
