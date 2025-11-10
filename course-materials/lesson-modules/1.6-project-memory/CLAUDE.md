@@ -144,9 +144,9 @@ CLAUDE.md 是一个让 Claude 永久记住你的产品上下文的文件。你�
 
 **快速说明:** 这个练习目录中的 CLAUDE.md 文件实际上就是我如何知道本模块的教学脚本的!在真实项目中,我会在你的SingTech项目根目录中创建 CLAUDE.md。
 
-由于这是一个没有实际SingTech项目的课程环境,让我创建一个 TASKFLOW_CLAUDE.md 文件来展示它应该包含什么内容。"
+由于这是一个没有实际SingTech项目的课程环境,让我创建一个 SINGTECH_CLAUDE.md 文件来展示它应该包含什么内容。"
 
-**操作:** 创建包含以下内容的 TASKFLOW_CLAUDE.md:
+**操作:** 创建包含以下内容的 SINGTECH_CLAUDE.md:
 
 ```markdown
 # SingTech - Project Memory
@@ -240,7 +240,7 @@ Senior Product Manager responsible for activation & onboarding flows.
 
 **说:**
 
-"我刚刚创建了 TASKFLOW_CLAUDE.md - 在你的文件查看器中看看它!
+"我刚刚创建了 SINGTECH_CLAUDE.md - 在你的文件查看器中看看它!
 
 这个文件包含 Claude 需要了解的关于SingTech的所有内容:
 - 产品上下文(SingTech是什么、公司阶段、关键指标)
@@ -254,7 +254,7 @@ Senior Product Manager responsible for activation & onboarding flows.
 
 在这个演示中,我会手动遵循这些规则来向你展示它的工作原理。"
 
-**停止:要求用户打开并阅读 `TASKFLOW_CLAUDE.md`**
+**停止:要求用户打开并阅读 `SINGTECH_CLAUDE.md`**
 
 **检查:** 等待学生查看文件
 
@@ -272,9 +272,9 @@ Senior Product Manager responsible for activation & onboarding flows.
 
 **当学生请求用户故事时,说:**
 
-"完美!让我为深色模式编写一个用户故事,遵循 TASKFLOW_CLAUDE.md 中的所有规则。"
+"完美!让我为深色模式编写一个用户故事,遵循 SINGTECH_CLAUDE.md 中的所有规则。"
 
-**操作:** 阅读 TASKFLOW_CLAUDE.md,然后遵循所有规则编写用户故事:
+**操作:** 阅读 SINGTECH_CLAUDE.md,然后遵循所有规则编写用户故事:
 
 ```markdown
 ## User Story: Dark Mode for Workspace Views
@@ -411,7 +411,7 @@ CLAUDE.md 是 Claude Code 最强大的功能之一 - 使每次对话都更好的
 
 **元解释:**
 - 承认这个 CLAUDE.md 就是教学脚本
-- 解释 TASKFLOW_CLAUDE.md 是示例(不是真正的 CLAUDE.md)
+- 解释 SINGTECH_CLAUDE.md 是示例(不是真正的 CLAUDE.md)
 - 明确说明在真实项目中 CLAUDE.md 应该放在哪里(项目根目录)
 
 **处理关于 CLAUDE.md 的问题:**
@@ -439,7 +439,7 @@ CLAUDE.md 是 Claude Code 最强大的功能之一 - 使每次对话都更好的
 - ✅ 理解宪法 vs 立法比喻
 - ✅ 知道 CLAUDE.md 创建永久项目记忆
 - ✅ 理解 # 符号提示全局 vs 项目选择
-- ✅ 看到了完整的 CLAUDE.md 示例(TASKFLOW_CLAUDE.md)
+- ✅ 看到了完整的 CLAUDE.md 示例(SINGTECH_CLAUDE.md)
 - ✅ 见证了 CLAUDE.md 如何影响输出(通过用户故事)
 - ✅ 对完成第 1 级感到兴奋
 - ✅ 知道如何继续第 2 级

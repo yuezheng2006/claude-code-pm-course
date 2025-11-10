@@ -165,7 +165,7 @@ Claude Code 最神奇的地方是，我可以将**完整的背景信息**整合�
 
 **行动：**
 
-读取 `taskflow-company-context.md` 并提取 2-3 个关键事实
+读取 `singtech-company-context.md` 并提取 2-3 个关键事实
 
 **这样呈现：**
 
@@ -174,12 +174,12 @@ Claude Code 最神奇的地方是，我可以将**完整的背景信息**整合�
 - [上下文文件中的关键事实 2]
 - [上下文文件中的关键事实 3]
 
-我提供了 `taskflow-company-context.md` 中的完整公司背景，所以我有关于你的产品、客户和业务目标的所有背景信息。
+我提供了 `singtech-company-context.md` 中的完整公司背景，所以我有关于你的产品、客户和业务目标的所有背景信息。
 
 我还在 `user-research/pain-points.md` 中提供了用户研究见解，你稍后可以根据需要整合这些见解。
 
 现在这是我们如何开始的。你将 @ 提及三个文件：
-- **`taskflow-company-context.md`** - 这样我就有了关于SingTech的完整背景
+- **`singtech-company-context.md`** - 这样我就有了关于SingTech的完整背景
 - **`methods/socratic-questioning.md`** - 我将使用的框架来帮助锐化你的思考
 - **你选择的模板** - 我们将用于 PRD 的结构
 
@@ -188,7 +188,7 @@ Claude Code 最神奇的地方是，我可以将**完整的背景信息**整合�
 继续 @ 提及那三个文件（公司背景、苏格拉底方法和模板），并告诉我基本的功能想法（AI 语音聊天与待办事项列表）。
 
 应该是这样的：
-**请帮我使用 @Lennys-PRD-Template.md 填写我的 prd 模板，用于 AI 语音聊天界面来管理待办事项列表。使用 @taskflow-company-context.md 并使用 @socratic-questioning.md 指导我完成该过程。我的想法是 [你的想法]**"
+**请帮我使用 @Lennys-PRD-Template.md 填写我的 prd 模板，用于 AI 语音聊天界面来管理待办事项列表。使用 @singtech-company-context.md 并使用 @socratic-questioning.md 指导我完成该过程。我的想法是 [你的想法]**"
 
 **停止：要求用户 @ 提及三个文件并声明功能想法**
 
@@ -203,7 +203,7 @@ Claude Code 最神奇的地方是，我可以将**完整的背景信息**整合�
 **行动：**
 
 读取所有三个 @-提及的文件：
-- `taskflow-company-context.md`
+- `singtech-company-context.md`
 - `methods/socratic-questioning.md`
 - 选择的模板文件
 
