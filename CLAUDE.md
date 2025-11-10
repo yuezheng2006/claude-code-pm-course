@@ -1,275 +1,275 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+此文件为Claude Code（claude.ai/code）在处理此仓库代码时提供指导。
 
-## Repository Overview
+## 仓库概览
 
-This is a dual-purpose repository for the Claude Code for Product Managers course:
+这是一个双用途仓库，用于Claude Code面向产品经理课程：
 
-1. **course-materials/** - Student-facing interactive course content (distributed via GitHub Releases as a zip)
-2. **website/** - Next.js documentation site (deployed to Vercel at ccforpms.com)
+1. **course-materials/** - 面向学生的交互式课程内容（通过GitHub Releases以zip形式分发）
+2. **website/** - Next.js文档站点（部署到Vercel，域名ccforpms.com）
 
-Students download course-materials/ as a zip, extract it, run `claude` from that folder, and type `/start-1-1` to begin learning.
+学生下载course-materials/作为zip文件，解压后从该文件夹运行`claude`，输入`/start-1-1`开始学习。
 
-## Course Architecture: Config-Driven System
+## 课程架构：配置驱动系统
 
-**This course uses a config-driven architecture for maximum flexibility when adding/reordering modules.**
+**本课程使用配置驱动架构，以最大化灵活性来添加/重新排序模块。**
 
-### Single Source of Truth: course-structure.json
+### 单一真理来源：course-structure.json
 
-All module definitions live in `course-materials/course-structure.json`. This file controls:
-- Course structure and module sequence
-- Slash command routing (all slash commands are identical - they read the config to know which teaching script to load)
-- Website navigation (generated at build time from the config)
-- Teaching script navigation (modules read config to know what comes next)
+所有模块定义都位于`course-materials/course-structure.json`中。此文件控制：
+- 课程结构和模块顺序
+- 斜杠命令路由（所有斜杠命令都相同 - 它们读取配置以了解要加载哪个教学脚本）
+- 网站导航（在构建时从配置生成）
+- 教学脚本导航（模块读取配置以了解接下来是什么）
 
-### How It Works
+### 工作原理
 
-**Slash Commands:**
-- All 10 slash commands (`/start-1-1` through `/start-2-3`) are identical
-- They parse their own command name (e.g., "start-1-2" → module "1.2")
-- They read `course-structure.json` to find the module's teaching script path
-- They load and execute that teaching script
+**斜杠命令：**
+- 所有10个斜杠命令（`/start-1-1`到`/start-2-3`）都是相同的
+- 它们解析自己的命令名称（例如："start-1-2" → 模块"1.2"）
+- 它们读取`course-structure.json`来找到模块的教学脚本路径
+- 它们加载并执行该教学脚本
 
-**Teaching Scripts:**
-- At the END of each module, scripts read `course-structure.json`
-- They dynamically determine what comes next
-- They tell students the correct slash command for the next module
+**教学脚本：**
+- 在每个模块的结尾，脚本读取`course-structure.json`
+- 它们动态确定接下来是什么
+- 它们告诉学生下一个模块的正确斜杠命令
 
-**Website Navigation:**
-- `website/pages/fundamentals/_meta.ts` and `website/pages/advanced/_meta.ts` import the config
-- Navigation is generated at build time from `course-structure.json`
+**网站导航：**
+- `website/pages/fundamentals/_meta.ts`和`website/pages/advanced/_meta.ts`导入配置
+- 导航在构建时从`course-structure.json`生成
 
-### Adding or Reordering Modules
+### 添加或重新排序模块
 
-To add a new module or reorder existing ones:
+要添加新模块或重新排序现有模块：
 
-1. **Edit `course-materials/course-structure.json`** - Add/move module definition
-2. **Create the new module folder and files** (if adding a new module)
-3. **Done!** Everything else updates automatically:
-   - Slash commands route correctly (they're all identical)
-   - Teaching scripts reference the correct "next" module (they read the config)
-   - Website navigation updates (generated from config at build time)
+1. **编辑`course-materials/course-structure.json`** - 添加/移动模块定义
+2. **创建新的模块文件夹和文件**（如果添加新模块）
+3. **完成！** 其他一切都会自动更新：
+   - 斜杠命令正确路由（它们都是相同的）
+   - 教学脚本引用正确的"下一个"模块（它们读取配置）
+   - 网站导航更新（在构建时从配置生成）
 
-**No need to:**
-- ❌ Rename folders
-- ❌ Update individual slash command files
-- ❌ Edit existing teaching scripts
-- ❌ Update website `_meta.ts` files manually
+**无需：**
+- ❌ 重命名文件夹
+- ❌ 更新单个斜杠命令文件
+- ❌ 编辑现有教学脚本
+- ❌ 手动更新网站`_meta.ts`文件
 
-**Example: Insert module 1.4 between current 1.3 and 1.4:**
+**示例：在当前1.3和1.4之间插入模块1.4：**
 
-Just edit `course-structure.json` to add the new module definition, and everything cascades automatically. The folder for the old 1.4 (agents) can stay named `1.4-agents` - the config maps logical IDs (1.5) to physical paths (1.4-agents).
+只需编辑`course-structure.json`添加新的模块定义，一切都会自动级联。旧的1.4（agents）文件夹可以保持名为`1.4-agents` - 配置将逻辑ID（1.5）映射到物理路径（1.4-agents）。
 
-### Benefits
+### 优势
 
-- ✅ Add modules without touching existing files
-- ✅ Reorder modules by editing one JSON file
-- ✅ Website and course materials stay in sync automatically
-- ✅ One source of truth for course structure
-- ✅ Maximum flexibility for course evolution
+- ✅ 在不接触现有文件的情况下添加模块
+- ✅ 通过编辑一个JSON文件重新排序模块
+- ✅ 网站和课程材料自动保持同步
+- ✅ 课程结构有一个单一真理来源
+- ✅ 课程演进的最大灵活性
 
-## Critical: When Opening This Repository
+## 关键：在打开此仓库时
 
-**DO NOT proactively set up, build, or install anything** when the user first opens this repository unless explicitly asked. The README.md contains specific warnings about this:
+**除非明确要求，否则不要主动设置、构建或安装任何东西**。README.md包含了关于此的具体警告：
 
-- ❌ Do NOT run `npm install`
-- ❌ Do NOT run `npm run build`
-- ❌ Do NOT make setup changes
-- ✅ Wait for explicit user instructions
+- ❌ 不要运行`npm install`
+- ❌ 不要运行`npm run build`
+- ❌ 不要进行设置更改
+- ✅ 等待明确的指示
 
-This is an interactive course repository. The user (or students) will guide what needs to be done.
+这是一个交互式课程仓库。用户（或学生）将指导需要做什么。
 
-## Common Commands
+## 常用命令
 
-### Release Management Workflow
+### 发布管理工作流
 
-**When You Update Course Content:**
+**更新课程内容时：**
 
-1. **Make your changes** to files in course-materials/
-   - Edit modules in `course-materials/lesson-modules/`
-   - Update company context in `course-materials/company-context/`
-   - Modify agents in `course-materials/.claude/agents/`
-   - etc.
+1. **对course-materials/中的文件进行更改**
+   - 编辑`course-materials/lesson-modules/`中的模块
+   - 更新`course-materials/company-context/`中的公司背景
+   - 修改`course-materials/.claude/agents/`中的代理
+   - 等等
 
-2. **Commit and push to main:**
+2. **提交并推送至main：**
    ```bash
    git add -A
-   git commit -m "Update Module 1.3 with new examples"
+   git commit -m "更新模块1.3的新示例"
    git push origin main
    ```
 
-3. **Create a new release:**
+3. **创建新发布：**
    ```bash
-   # Run the release script with new version number
+   # 使用新版本号运行发布脚本
    ./scripts/create-release.sh v1.0.1
 
-   # Create GitHub release with the new zip
+   # 使用新zip创建GitHub发布
    gh release create v1.0.1 releases/complete-course.zip \
-     --title "v1.0.1 - Updated Module 1.3" \
-     --notes "- Fixed typos in Module 1.3\n- Added new examples to Module 2.1"
+     --title "v1.0.1 - 更新模块1.3" \
+     --notes "- 修复模块1.3中的拼写错误\n- 为模块2.1添加新示例"
    ```
 
-4. **Update the website (if needed):**
-   - The homepage shows "Latest: v1.0.0"
-   - Update this in `website/pages/index.mdx` line 128:
+4. **更新网站（如需要）：**
+   - 主页显示"Latest: v1.0.0"
+   - 在`website/pages/index.mdx`第128行更新：
    ```markdown
-   **👉 [Download Course Materials](...latest/download/complete-course.zip)** - Get the complete course (Latest: v1.0.1)
+   **👉 [下载课程材料](...latest/download/complete-course.zip)** - 获取完整课程（最新版本：v1.0.1）
    ```
 
-**How GitHub Releases Works:**
-- `/releases/latest/download/complete-course.zip` - Always points to the most recent release
-- Students using this URL automatically get the latest version
-- You can create as many releases as you want (v1.0.1, v1.0.2, v1.1.0, etc.)
-- Old releases stay available at their specific version URLs
+**GitHub发布的工作原理：**
+- `/releases/latest/download/complete-course.zip` - 始终指向最新发布
+- 使用此URL的学生自动获取最新版本
+- 您可以创建任意数量的发布（v1.0.1、v1.0.2、v1.1.0等）
+- 旧发布在它们的特定版本URL中仍然可用
 
-**Semantic Versioning Guide:**
-- `v1.0.X` (Patch) - Bug fixes, typos, minor updates to existing content
-- `v1.X.0` (Minor) - New modules, new features, significant content additions
-- `vX.0.0` (Major) - Complete restructuring, breaking changes
+**语义化版本指南：**
+- `v1.0.X` (补丁) - 错误修复、拼写错误、对现有内容的微小更新
+- `v1.X.0` (次要) - 新模块、新功能、对现有内容的重大添加
+- `vX.0.0` (主要) - 完全重构、破坏性更改
 
-**Quick Reference Commands:**
+**快速参考命令：**
 ```bash
-# 1. Update content, commit, push
+# 1. 更新内容，提交，推送
 git add -A && git commit -m "..." && git push origin main
 
-# 2. Create new release zip
+# 2. 创建新发布zip
 ./scripts/create-release.sh v1.0.1
 
-# 3. Publish to GitHub
+# 3. 发布到GitHub
 gh release create v1.0.1 releases/complete-course.zip \
-  --title "v1.0.1 - Description" \
-  --notes "What changed"
+  --title "v1.0.1 - 描述" \
+  --notes "更改内容"
 ```
 
-That's it! The `/releases/latest/` URL in your website will automatically point to whatever is the newest release.
+就是这样！您网站中的`/releases/latest/` URL将自动指向最新的发布。
 
-### Website Development
+### 网站开发
 
-**Local development:**
+**本地开发：**
 ```bash
 cd website
 npm install
 npm run dev
 ```
 
-**Build for production:**
+**生产构建：**
 ```bash
 cd website
 npm run build
 ```
 
-The build process:
-1. `next build` - Creates static export in website/out/
-2. `next-sitemap` - Generates sitemap.xml and robots.txt
-3. `pagefind` - Builds search index for static site
+构建过程：
+1. `next build` - 在website/out/中创建静态导出
+2. `next-sitemap` - 生成sitemap.xml和robots.txt
+3. `pagefind` - 为静态站点构建搜索索引
 
-**Preview production build:**
+**预览生产构建：**
 ```bash
 cd website
 npm run preview
 ```
 
-### Deployment
+### 部署
 
-Website auto-deploys to Vercel (ccforpms.com) on pushes to main branch. No manual deployment needed.
+网站在推送到main分支时自动部署到Vercel（ccforpms.com）。无需手动部署。
 
-### Analytics
+### 分析
 
-**Google Analytics:**
-- Measurement ID: `G-XBF1JD68VY`
-- Implemented in: `website/theme.config.tsx` (lines 44-55)
-- Tracks: Page views, visitors, traffic sources, geographic data, device types, scroll depth, outbound clicks
-- Verify: Visit site → check Google Analytics Realtime dashboard
+**Google Analytics：**
+- 测量ID：`G-XBF1JD68VY`
+- 实现位置：`website/theme.config.tsx`（第44-55行）
+- 跟踪：页面浏览量、访客、流量来源、地域数据、设备类型、滚动深度、外链点击
+- 验证：访问网站 → 检查Google Analytics实时仪表板
 
-**Download Tracking:**
-- Course material downloads (via `curl` from Module 0.2) are tracked by GitHub's built-in release download stats
-- Check download counts: GitHub repo → Releases tab, or via `gh api repos/yuezheng2006/claude-code-pm-course/releases`
-- Google Analytics does NOT track these downloads (they bypass the website entirely)
+**下载跟踪：**
+- 课程材料下载（通过模块0.2的curl）由GitHub内置的发布下载统计跟踪
+- 检查下载次数：GitHub仓库 → Releases选项卡，或通过`gh api repos/yuezheng2006/claude-code-pm-course/releases`
+- Google Analytics不会跟踪这些下载（它们绕过网站）
 
-## Repository Architecture
+## 仓库架构
 
-### Course Materials (course-materials/)
+### 课程材料 (course-materials/)
 
-**Structure:**
-- `lesson-modules/` - Module 1 and Module 2 interactive lessons
-- `company-context/` - TaskFlow company reference materials used in exercises
-- `.claude/` - Slash commands, agents, and teaching scripts that power the course
+**结构：**
+- `lesson-modules/` - 模块1和模块2的交互式课程
+- `company-context/` - 练习中使用的TaskFlow公司参考材料
+- `.claude/` - 驱动课程的斜杠命令、代理和教学脚本
 
-**Slash Commands:**
-Located in `course-materials/.claude/commands/`, these are teaching scripts that guide students through modules:
-- `/start-1-1`, `/start-1-2`, etc. for Module 1 lessons
-- `/start-2-1`, `/start-2-2`, etc. for Module 2 lessons
+**斜杠命令：**
+位于`course-materials/.claude/commands/`，这些是指导学生完成模块的教学脚本：
+- `/start-1-1`、`/start-1-2`等用于模块1课程
+- `/start-2-1`、`/start-2-2`等用于模块2课程
 
-**Teaching Script Behavior:**
-When a user types a slash command in the course-materials/ folder, read `course-materials/.claude/SCRIPT_INSTRUCTIONS.md` for critical rules on how to execute teaching scripts. Key points:
-- Teaching scripts must be followed verbatim (word-for-word for "Say:" blocks)
-- "Check:" points are gates - STOP and WAIT for student response
-- "Action:" blocks contain exact commands to execute
-- NEVER break the fourth wall or say "I've read the script" - start teaching immediately
-- Use .md file extensions for all example files (not .txt) so they work with Obsidian
+**教学脚本行为：**
+当用户在course-materials/文件夹中输入斜杠命令时，阅读`course-materials/.claude/SCRIPT_INSTRUCTIONS.md`了解执行教学脚本的关键规则。主要要点：
+- 教学脚本必须逐字遵循（"Say:"块要逐字逐句）
+- "Check:"点是关卡 - 停止并等待学生响应
+- "Action:"块包含确切的命令
+- 绝不打破第四面墙或说"我已经读过脚本" - 立即开始教学
+- 所有示例文件使用.md扩展名（不是.txt），以便与Obsidian配合使用
 
-### Website (website/)
+### 网站 (website/)
 
-**Tech Stack:**
-- Next.js 14 with static export (`output: 'export'`)
-- Nextra (documentation theme)
-- Pagefind (static search)
-- Vercel (hosting)
+**技术栈：**
+- Next.js 14，支持静态导出（`output: 'export'`）
+- Nextra（文档主题）
+- Pagefind（静态搜索）
+- Vercel（托管）
 
-**Page Structure:**
+**页面结构：**
 ```
 website/pages/
-  getting-started/     - Module 0 content (installation, setup)
-  fundamentals/        - Module 1 content
-  advanced/           - Module 2 content
-  company-context/    - TaskFlow reference (excluded from sitemap)
-  index.mdx           - Landing page
-  _meta.ts            - Navigation structure
+  getting-started/     - 模块0内容（安装、设置）
+  fundamentals/        - 模块1内容
+  advanced/           - 模块2内容
+  company-context/    - TaskFlow参考（从站点地图中排除）
+  index.mdx           - 首页
+  _meta.ts            - 导航结构
 ```
 
-**Key Files:**
-- `theme.config.tsx` - Nextra theme configuration (logo, footer, SEO, navigation)
-- `next.config.mjs` - Next.js config (static export, image optimization)
-- `next-sitemap.config.js` - Sitemap generation (excludes /company-context/*)
+**关键文件：**
+- `theme.config.tsx` - Nextra主题配置（logo、页脚、SEO、导航）
+- `next.config.mjs` - Next.js配置（静态导出、图片优化）
+- `next-sitemap.config.js` - 站点地图生成（排除/company-context/*）
 
-**SEO Configuration:**
-The site has comprehensive SEO in theme.config.tsx:
-- Open Graph tags
-- Twitter cards
-- Google site verification
-- Custom metadata per page via frontMatter
-- Structured data support
+**SEO配置：**
+网站在theme.config.tsx中具有全面的SEO：
+- Open Graph标签
+- Twitter卡片
+- Google网站验证
+- 通过frontMatter的每页自定义元数据
+- 结构化数据支持
 
-### Internal Documentation (docs/)
+### 内部文档 (docs/)
 
-Planning documents not included in student-facing materials:
-- `GITHUB_RELEASES_PLAN.md` - Release strategy documentation
-- `SEO_IMPLEMENTATION_SPEC.md` - SEO specifications
+不包含在面向学生的材料中的规划文档：
+- `GITHUB_RELEASES_PLAN.md` - 发布策略文档
+- `SEO_IMPLEMENTATION_SPEC.md` - SEO规范
 
-## File Extension Convention
+## 文件扩展名约定
 
-All course example files MUST use `.md` extension (not `.txt`) because:
-- Students use Obsidian to visualize course files (taught in Module 1.2)
-- Obsidian cannot display .txt files
-- This is enforced in SCRIPT_INSTRUCTIONS.md
+所有课程示例文件必须使用`.md`扩展名（不是`.txt`），因为：
+- 学生使用Obsidian来可视化课程文件（在模块1.2中教授）
+- Obsidian无法显示.txt文件
+- 这在SCRIPT_INSTRUCTIONS.md中强制执行
 
-## Git Workflow
+## Git工作流
 
-**Ignored files (.gitignore):**
-- Obsidian workspace files (personal settings)
-- Release artifacts (releases/, *.zip)
-- Build outputs (node_modules/)
-- Most .json files (except package.json, tsconfig.json)
-- Most .png files (except website/public/**/*.png)
+**忽略的文件（.gitignore）：**
+- Obsidian工作区文件（个人设置）
+- 发布产物（releases/、*.zip）
+- 构建输出（node_modules/）
+- 大多数.json文件（除了package.json、tsconfig.json）
+- 大多数.png文件（除了website/public/**/*.png）
 
-**Branch:**
-Main branch is `main` - use this for pull requests.
+**分支：**
+主分支是`main` - 用于拉取请求。
 
-## Website Theme Customization
+## 网站主题定制
 
-The site uses a teal color scheme (`primaryHue: 169`) with dark theme default. Footer includes CC BY-NC-ND 4.0 license attribution.
+网站使用青色配色方案（`primaryHue: 169`），默认深色主题。页脚包含CC BY-NC-ND 4.0许可证归属。
 
-## Course Philosophy
+## 课程理念
 
-This course teaches Product Managers to use Claude Code through hands-on practice. The course content itself is delivered by Claude Code, creating a meta-learning experience where students learn the tool by using the tool.
+本课程通过动手实践教导产品经理使用Claude Code。课程内容本身通过Claude Code交付，创造了一种元学习体验，让学生通过使用工具来学习工具。

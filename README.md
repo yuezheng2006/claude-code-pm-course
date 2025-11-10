@@ -74,8 +74,4 @@
 
 **完成时间：** 完整交互式学习路径约4-6小时
 
-## 许可证
 
-本作品采用 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) 许可证。
-
-版权 © 2025 Carl Vellotti。您可以查看和分享本课程内容（需注明出处），但不允许商业使用和修改。
