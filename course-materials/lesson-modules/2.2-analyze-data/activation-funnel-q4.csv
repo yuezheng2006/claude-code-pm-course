@@ -1,0 +1,5 @@
+﻿step,users_entered,users_completed,completion_rate,median_time_to_complete
+注册,10000,10000,1.0,0
+首次选歌,10000,7200,0.72,5
+完成首次演唱,7200,2880,0.4,8
+分享作品,2880,1440,0.5,3

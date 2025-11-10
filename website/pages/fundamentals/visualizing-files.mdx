@@ -1,0 +1,187 @@
+---
+title: "1.2: Visualizing Files with Feishu"
+description: Set up Feishu Docs to see your files visually alongside Claude Code for a seamless split-screen workflow
+---
+
+## 1.2: Visualizing Files with Feishu
+
+ - **Time to Complete:** 15-20 minutes
+ - **Prerequisites:** Module 1.1 complete, basic familiarity with file systems
+
+
+> **Start this module in Claude Code:** Run `/start-1-2` to kick off the interactive experience.
+
+## 📖 Overview
+
+Set up Feishu Docs to visualize your project files in real-time alongside Claude Code for a seamless split-screen workflow.
+
+**Key takeaway:** Visual workspace lets you watch files appear and update as Claude works.
+
+
+## 🎯 Why Visualization Matters
+
+Working with Claude Code in a terminal feels like working blind. You ask Claude to create documents, but you can't see what's happening.
+
+**The solution:** Open Obsidian alongside your terminal. Now you can:
+- Watch files appear as Claude creates them
+- Read documents while Claude is working
+- Verify everything is organized correctly
+- Always know exactly what's happening
+
+This transforms Claude Code from a mysterious black box into a transparent tool you can watch and verify in real-time.
+
+
+## 🎨 Why Feishu?
+
+Feishu Docs is perfect for PMs because it's built for collaborative documents (PRDs, notes, docs) and has a clean, team-friendly interface. It's your company standard tool with excellent markdown support.
+
+**Alternatives:** VS Code (more powerful) or Cursor (VS Code + AI) also work great. We'll use Feishu Docs for this course since it's your company standard tool.
+
+
+## 🚀 Setup Guide
+
+**Access:** Visit https://www.feishu.cn/ and log in with your company account
+
+**Connect your project:** In Feishu Docs, select "Import from folder" and navigate to your course folder (ask Claude for the path if needed)
+
+**Split-screen workflow:** Position Claude Code terminal and Feishu Docs side-by-side to watch files sync in real-time
+
+
+## ⚠️ The .claude/ Folder
+
+**Key limitation:** Feishu Docs cannot display hidden folders (folders starting with `.`)
+
+The `.claude/` folder contains agents, commands, and settings. You won't see it in Feishu Docs - this is normal.
+
+**To view `.claude/` files:**
+- **Mac:** Press `Cmd + Shift + .` in Finder to show hidden folders
+- **Windows:** Enable "Hidden items" in File Explorer View tab
+
+**When you need it:** Module 1.5 (Custom Sub-Agents) and later. For now, focus on regular project files.
+
+**Note:** Claude Code can access `.claude/` files - only Feishu Docs can't display them.
+
+
+## 🎬 Real-Time Visualization Demo
+
+When Claude creates or edits files, you'll watch them sync in Feishu Docs instantly.
+
+**Try it:**
+
+1. Open Feishu Docs with your project folder
+2. In Claude Code, ask: *Create a file called test-visualization.md with some content*
+3. Watch Feishu Docs - the file syncs immediately
+4. Click it to read what Claude wrote
+
+That's it! No refresh needed. Files sync in real-time as Claude works.
+
+
+## 💡 Feishu Tips for PM Work
+
+**Essential features:**
+- **Search bar** - Quick search across all documents
+- **Document linking** - Use `@document-name` to reference other docs
+- **Split view** - Click "Split" button to view multiple docs side-by-side
+
+**Document organization:** Use folders and subfolders to organize your PM documents by project and timeline
+
+**Tags:** Use Feishu's tagging system with `#prd #user-research #q1-2025` for filtering
+
+**Collaboration features** - Share and comment on documents with your team
+
+
+## 💼 示例：实时工作流
+
+**没有可视化：** Claude 创建文件，但你不确定发生了什么或文件在哪里。
+
+**使用飞书文档：** 观看文件立即同步，点击查看内容，验证组织 - 完全可见性和控制。
+
+
+## ✅ 最佳实践
+
+**要做的：**
+- 持续使用分屏工作流
+- 利用搜索栏快速查找文档
+- 使用分栏视图并排查看文档
+
+**不要做的：**
+- 期望看到 `.claude/` 文件夹（它是隐藏的 - 使用文件管理器）
+- 只使用全屏终端工作（你会错过一半的价值）
+
+
+## 🐛 故障排除
+
+**我看不到任何文件：**
+
+**可能原因：** 连接了错误的文件夹
+
+**修复方法：**
+1. 询问 Claude：我的课程文件夹路径是什么？
+2. 在飞书文档中：断开连接并重新导入
+3. 再次导入文件夹，使用 Claude 给的确切路径
+4. 你的文件现在应该会出现
+
+**常见错误：** 打开了父文件夹而不是项目文件夹本身
+
+**示例：**
+- ❌ 打开了：`/Users/yourname/Documents`（层级太高）
+- ✅ 应该打开：`/Users/yourname/Documents/claude-code-pm-course`
+
+### 文件没有在飞书文档中更新
+
+**可能原因：** 飞书文档需要检测到更改
+
+**修复方法：**
+1. 点击飞书文档窗口外部然后回到窗口（强制刷新）
+2. 或者：关闭并重新打开特定文件
+3. 或者：重启飞书文档（罕见，但有效）
+
+**预防：** 通常不会发生。如果反复出现，检查：
+- 飞书文档是否连接到正确的文件夹？
+- 你是否在编辑正确的文件？（检查文件路径）
+
+### 我在文件中看到奇怪的代码/格式
+
+**可能原因：** 你处于编辑视图而不是阅读视图
+
+**你看到的内容：**
+```markdown
+# 这是一个标题
+
+**这是粗体** 和 *这是斜体*
+
+- 项目符号
+- 另一个项目符号
+```
+
+**你应该看到的内容：** 格式化的文本（实际的标题、实际的粗体、实际的项目符号）
+
+**修复方法：**
+- 在飞书文档中切换到预览/阅读模式
+- 或者点击文档顶部的预览按钮
+
+### .claude/ 文件夹在哪里？我找不到它！
+
+**答案：** 它是隐藏的！这是正常且预期的。
+
+**要查看它：**
+
+**Mac：**
+1. 打开 Finder
+2. 导航到你的项目文件夹
+3. 按：`Cmd + Shift + .`（句点）
+4. `.claude/` 变得可见（变暗/灰色）
+
+**Windows：**
+1. 打开文件资源管理器
+2. 导航到你的项目文件夹
+3. 查看选项卡 → 选中隐藏的项目
+4. `.claude/`
+
+---
+
+**关于本课程**
+
+由 [Carl Vellotti](https://www.linkedin.com/in/yuezheng2006/) 创建。如果您对这个模块或整个课程有任何反馈，请给我留言！我正在为 PM 构建者建立一个新闻通讯和社区，请查看 [The Full Stack PM](https://fullstack-pm.com/subscribe?utm_source=ccforpms&utm_medium=course&utm_campaign=visualizing-files)。
+
+**源码仓库：** [github.com/yuezheng2006/claude-code-pm-course](https://github.com/yuezheng2006/claude-code-pm-course)

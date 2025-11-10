@@ -1,0 +1,39 @@
+---
+title: Search
+description: 全文搜索所有课程内容
+---
+
+# Search
+
+使用下面的搜索框在所有课程页面中查找内容。搜索由 Pagefind 提供支持，完全在客户端（不需要服务器）上工作。
+
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+<div id="search"></div>
+<script src="/pagefind/pagefind-ui.js"></script>
+<script dangerouslySetInnerHTML={{__html: `
+  if (typeof window !== "undefined") {
+    window.addEventListener("DOMContentLoaded", () => {
+      new PagefindUI({ 
+        element: "#search", 
+        showImages: false, 
+        baseUrl: "/",
+        showSubResults: true
+      })
+    })
+  }
+`}} />
+
+## 搜索提示
+
+- **精确短语**: 使用引号，如 `project memory`
+- **多个术语**: 搜索 `PRD template` 找到包含两个词的页面
+- **过滤器**: 结果显示每个匹配来自哪个部分
+
+## 找不到内容？
+
+如果你找不到你想要的内容：
+- 尝试不同的关键词或同义词
+- 浏览侧边栏导航
+- 查看 [公司上下文](/company-context/overview) 了解 TaskFlow 背景
+- 从 [入门](/getting-started/introduction) 开始了解课程基础
+

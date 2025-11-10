@@ -1,0 +1,270 @@
+---
+title: "1.7: Claude Code 导航"
+description: 掌握文件操作、搜索和导航技巧
+---
+
+## 1.7: Claude Code 导航
+
+ - **完成时间：** 15-20 分钟
+ - **先修要求：** 完成模块 1.1-1.6
+
+
+> **在 Claude Code 中启动这个模块：** 运行 `/start-1-7` 来开始互动体验。
+
+## 📖 概述
+
+模块 1.7 涵盖最终的导航要点：输入模式、分析深度控制和工作流加速。这些技能将普通用户与高级用户区分开来。
+
+**你将学到：**
+1. **输入模式** - 编辑、自动接受和计划模式
+2. **思考关键词** - 控制分析深度（think/think harder/ultrathink）
+3. **--dangerously-skip-permissions** - 关键工作流加速器
+
+**关键要点：** 掌握何时使用每种模式，根据需求调整分析深度，并从工作流中消除摩擦。
+
+
+## 🎛️ 三种输入模式
+
+Claude Code 有三种输入模式来控制工作流执行：
+
+| 模式 | 行为 | 最适合 | 切换方法 |
+|------|----------|----------|---------------|
+| **编辑**（默认） | 显示差异，等待批准 | 关键文件、学习、安全 | 按 Shift+Tab |
+| **自动接受** | 立即应用更改 | 简单任务、可信操作 | 按 Shift+Tab |
+| **计划** | 首先创建带待办事项的结构化计划 | 多步骤工作流、复杂研究 | 按 Shift+Tab |
+
+**切换：** 随时按 **Shift+Tab** 在模式间循环。
+
+### 编辑模式（默认）
+
+在应用之前显示每个文件更改。你审查并批准每个更改。
+
+**何时使用：**
+- 处理关键文件
+- 学习 Claude 如何处理任务
+- 需要控制和审查
+
+### 自动接受模式
+
+自动应用更改而无需询问。快速且自主。
+
+**何时使用：**
+- 任务简单明了
+- 信任 Claude 正确执行
+- 想要速度而不是审查
+
+### 计划模式
+
+在执行之前创建带有自动生成待办事项列表的结构化计划。提前了解策略。
+
+**Use when:**
+- Complex, multi-step workflows (3+ distinct steps)
+- Want to see strategy before execution
+- Research → synthesis → deliverable workflows
+- Multiple agents need coordination
+
+**Example todo list:**
+```
+☐ Research TaskFlow's main competitors
+☐ Launch parallel agents to analyze AI features
+☐ Synthesize findings into competitive analysis
+☐ Create response strategy document
+```
+
+As Claude works:
+```
+✓ Research TaskFlow's main competitors
+→ Launch parallel agents to analyze AI features
+☐ Synthesize findings into competitive analysis
+☐ Create response strategy document
+```
+
+
+## 🎯 Mode Selection Guide
+
+| Task | Recommended Mode | Why |
+|------|------------------|-----|
+| Research 5 competitors and create strategy | Plan Mode | Complex, multi-step, benefits from visibility |
+| Add dark mode toggle | Auto-Accept/Edit | Simple, one-step task |
+| Fix typo in README | Auto-Accept/Edit | Simple, low-risk |
+| Create PRD from rough notes | Plan Mode | Multi-step: research → outline → draft |
+| Analyze CSV file | Auto-Accept | Straightforward analysis |
+| Multi-source research synthesis | Plan Mode | Complex: agents → synthesis |
+
+**Quick Decision Tree:**
+1. Complex multi-step workflow? → **Plan Mode**
+2. Straightforward and low-risk? → **Auto-Accept**
+3. Otherwise → **Edit Mode** (safest)
+
+
+## 💡 Think Control Keywords
+
+Adjust analysis depth before Claude responds:
+
+| Keyword | Depth | When to Use |
+|---------|-------|-------------|
+| `think about X` | Normal | Most tasks |
+| `think harder about X` | Deeper | Complex decisions |
+| `ultrathink about X` | Maximum | Really hard problems (displays as rainbow!) |
+
+**Examples:**
+
+With plan mode:
+```
+Think harder about competitive threats, then research competitors' AI features
+and create response strategy
+```
+
+With any mode:
+```
+Ultrathink about whether we should build or buy this feature
+```
+
+**Pro tip:** Think keywords work in all input modes, especially useful in plan mode for complex strategy work.
+
+
+## ⚡ Dangerously Skip Permissions
+
+### The Flag
+
+```bash
+claude --dangerously-skip-permissions
+```
+
+**What it does:** Skips all permission prompts. Claude executes commands without approval.
+
+**The transformation:**
+
+| Without Flag | With Flag |
+|--------------|-----------|
+| Can I write to user-story-1.md? → Yes<br/>Can I write to user-story-2.md? → Yes<br/>Can I write to user-story-3.md? → Yes<br/>[Repeat for every file...] | [Creates all 5 files immediately]<br/>Done! |
+
+### Why It's Worth It
+
+**The tradeoff:**
+- **Risk:** No safety net, commands execute immediately
+- **Reward:** Pure flow state, 10x faster, real workflow speed
+
+### Carl's Strong Recommendation
+
+**Use it** once you've completed Level 1 and trust Claude Code. The speed gains are worth it.
+
+**Create a shell alias:**
+```bash
+alias cc="claude --dangerously-skip-permissions"
+```
+
+Then just type `cc` to start Claude Code in fast mode.
+
+**When to use:**
+- Completed Level 1
+- Trust Claude Code
+- Working in safe environment
+- Want professional speed
+
+**When to avoid:**
+- Production code
+- Unsure what Claude will do
+- Learning new project
+
+
+## 🛑 Stopping Execution
+
+**Press Esc at any time** to stop Claude from executing.
+
+**What happens:**
+- Execution stops immediately
+- Files created so far remain
+- Can review and decide next steps
+
+**Pro tip:** In plan mode, press Esc once you've seen the value, then review files when ready.
+
+
+## 💡 Best Practices
+
+**Do:**
+- Use plan mode for multi-step workflows (3+ steps)
+- Switch modes based on task complexity
+- Use think keywords for deeper analysis on complex decisions
+
+**Don't:**
+- Use plan mode for simple tasks (overkill)
+- Stay in one mode all the time (be flexible)
+- Forget Esc stops execution
+
+**Workflow Development:**
+- **Week 1:** Edit mode for everything (learn how Claude works)
+- **Week 2:** Auto-accept for simple tasks
+- **Week 3:** Plan mode for complex workflows
+- **Week 4:** Natural mode switching based on task
+
+
+## ❓ Common Questions
+
+**When should I use plan mode vs just asking Claude to do it?**
+
+Use plan mode when task has 3+ distinct steps or involves research → synthesis → deliverable. Skip for simple, obvious tasks.
+
+**Can I edit the plan before Claude executes?**
+
+Yes! Ask to adjust: "Add a step to..." or "Remove the X part" work perfectly.
+
+**Should I always use --dangerously-skip-permissions?**
+
+Use when you trust Claude and speed matters. Avoid for production code or when learning new projects.
+
+**Do think keywords work in all modes?**
+
+Yes! They adjust analysis depth in edit, auto-accept, and plan modes.
+
+
+## 🎉 What's Next?
+
+### Level 1 Complete
+
+**Congratulations!** You've mastered all of Level 1: Foundation.
+
+**Skills acquired:**
+- ✅ File operations (read, write, edit, reference)
+- ✅ Real-time visualization with Obsidian
+- ✅ PM document processing
+- ✅ Parallel agents for cloning yourself
+- ✅ Specialized sub-agent team
+- ✅ Permanent project memory (CLAUDE.md)
+- ✅ Workflow mode selection
+- ✅ Analysis depth control
+- ✅ Friction-free flow state work
+
+**Time savings: 10-15 hours per week**
+
+### Level 2: Real PM Workflows
+
+Ready to save 20+ hours per week? Level 2 teaches daily PM workflows.
+
+**Module 2.1: Write a PRD**
+- Transform rough ideas into complete PRDs
+- Research agents and Socratic refinement
+
+**Module 2.2: Analyze Product Data & Build Dashboards**
+- Handle large datasets (CSV, surveys)
+- Multi-source research synthesis
+
+**Module 2.3: Build Product Strategy & Roadmap**
+- Competitive research at scale
+- Strategic synthesis and roadmap creation
+
+**Start Level 2:**
+```
+/start-2-1
+```
+
+**庆祝这个成就！** 你已经为 Claude Code 精通构建了完整的基础。🎓
+
+
+---
+
+**关于本课程**
+
+由 [Carl Vellotti](https://www.linkedin.com/in/yuezheng2006/) 创建。如果您对这个模块或整个课程有任何反馈，请给我留言！我正在为 PM 构建者建立一个新闻通讯和社区，请查看 [The Full Stack PM](https://fullstack-pm.com/subscribe?utm_source=ccforpms&utm_medium=course&utm_campaign=claude-code-navigation)。
+
+**源码仓库：** [github.com/yuezheng2006/claude-code-pm-course](https://github.com/yuezheng2006/claude-code-pm-course)
