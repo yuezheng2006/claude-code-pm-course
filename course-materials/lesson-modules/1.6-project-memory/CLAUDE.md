@@ -220,8 +220,8 @@ Senior Product Manager responsible for activation & onboarding flows.
 **Tools We Use:**
 - Linear (for engineering task management)
 - Figma (for design work)
-- Notion (for documentation)
-- Slack (for team communication)
+- 飞书文档 (for documentation)
+- 企业微信 (for team communication)
 
 ## Immutable Rules
 

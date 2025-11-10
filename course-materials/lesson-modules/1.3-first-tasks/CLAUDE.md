@@ -268,9 +268,9 @@ lesson-modules/1.3-first-tasks/user-interviews/
 
 这是每个 PM 不断面临的场景:你刚刚综合了用户研究发现,现在你需要将其传达给不同的受众:
 
-1. **Slack 更新** 给你的团队(非正式、快速)
+1. **飞书群更新** 给你的团队(非正式、快速)
 2. **执行电子邮件** 给领导层(战略、高层)
-3. **详细的 Notion 文档** 给整个公司(全面)
+3. **详细的飞书文档** 给整个公司(全面)
 
 相同的研究发现,3 种完全不同的格式和语调。
 
@@ -279,7 +279,7 @@ lesson-modules/1.3-first-tasks/user-interviews/
 **如果你有预先定义的通信风格,你可以每次重复使用呢?**
 
 与其从头开始重写,你只需说:
-'将这个研究转换为 Slack 更新风格、执行电子邮件风格和 Notion 文档风格'
+'将这个研究转换为飞书群更新风格、执行电子邮件风格和飞书文档风格'
 
 让我展示一下。我为你准备了 3 个通信风格模板供你查看。
 
@@ -287,9 +287,9 @@ lesson-modules/1.3-first-tasks/user-interviews/
 lesson-modules/1.3-first-tasks/communication-styles/
 
 你会找到 3 个文件:
-- style-slack-update.md
-- style-executive-email.md
-- style-notion-doc.md
+- 团队更新风格.md
+- 高管邮件风格.md
+- 飞书文档风格.md
 
 **查看每一个** - 看看他们如何定义格式规则、语调和示例。然后回来说: **'我看到风格'**"
 
@@ -327,9 +327,9 @@ lesson-modules/1.3-first-tasks/communication-styles/
 1. 读取 lesson-modules/1.3-first-tasks/communication-styles/ 中的所有文件
 2. 读取 exercises/1.3-first-tasks/user-research-synthesis.md
 3. 创建 research-communications.md,有三个部分:
-   - 第 1 部分:Slack 更新(遵循 style-slack-update.md 格式)
-   - 第 2 部分:执行电子邮件(遵循 style-executive-email.md 格式)
-   - 第 3 部分:Notion 文档(遵循 style-notion-doc.md 格式)
+   - 第 1 部分:飞书群更新(遵循 团队更新风格.md 格式)
+   - 第 2 部分:执行电子邮件(遵循 高管邮件风格.md 格式)
+   - 第 3 部分:飞书文档(遵循 飞书文档风格.md 格式)
 4. 包括一个标头,说明它是使用 @communication-styles 从 @user-research-synthesis.md 创建的
 
 **这样呈现:**
@@ -339,9 +339,9 @@ lesson-modules/1.3-first-tasks/communication-styles/
 **在 飞书文档 中检查它!**
 
 你应该看到:
-📱 **Slack 更新** - 短的、非正式的、以团队为中心(2-3 行)
+📱 **飞书群更新** - 短的、非正式的、以团队为中心(2-3 行)
 📧 **执行电子邮件** - 战略的、以业务影响为中心(3 段)
-📝 **Notion 文档** - 全面的、格式良好的、所有细节
+📝 **飞书文档** - 全面的、格式良好的、所有细节
 
 **相同的研究发现,3 种完全不同的格式 - 全部使用你预定义的风格!**
 
@@ -373,7 +373,7 @@ lesson-modules/1.3-first-tasks/communication-styles/
 4. **每周更新** - 什么已发布、什么在进行中、什么被阻止
 5. **发布说明** - 以客户为中心、以好处为中心、令人兴奋
 6. **PRD 部分** - 问题、解决方案、成功指标、用户故事
-7. **Slack 公告** - 非正式的、以团队为中心的、庆祝导向
+7. **飞书群公告** - 非正式的、以团队为中心的、庆祝导向
 8. **利益相关者电子邮件** - 专业的、战略的、背景丰富
 
 **现实时间节省:**
@@ -585,7 +585,7 @@ lesson-modules/1.3-first-tasks/communication-styles/
 
 **3. 通信转换**
 - 相同的信息,多种格式
-- 为不同的受众调整语调(Slack vs 电子邮件 vs Notion)
+- 为不同的受众调整语调(飞书群 vs 电子邮件 vs 飞书文档)
 - 节省重写时间
 
 **4. 图像处理** 🚨

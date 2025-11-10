@@ -193,7 +193,7 @@ npm run preview
 
 **结构：**
 - `lesson-modules/` - 模块1和模块2的交互式课程
-- `company-context/` - 练习中使用的TaskFlow公司参考材料
+- `company-context/` - 练习中使用的SingTech公司参考材料
 - `.claude/` - 驱动课程的斜杠命令、代理和教学脚本
 
 **斜杠命令：**
@@ -223,7 +223,7 @@ website/pages/
   getting-started/     - 模块0内容（安装、设置）
   fundamentals/        - 模块1内容
   advanced/           - 模块2内容
-  company-context/    - TaskFlow参考（从站点地图中排除）
+  company-context/    - SingTech参考（从站点地图中排除）
   index.mdx           - 首页
   _meta.ts            - 导航结构
 ```
