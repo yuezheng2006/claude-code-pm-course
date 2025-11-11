@@ -97,7 +97,15 @@ if [ "$TEST_MODE" = "1" ]; then
     echo "[TEST] Would extract to: $COURSE_DIR"
     echo "✓ [TEST] Course materials download simulated"
 else
-    cd "$HOME/Documents"
+    # Ensure Documents directory exists
+    if [ ! -d "$HOME/Documents" ]; then
+        mkdir -p "$HOME/Documents"
+    fi
+
+    cd "$HOME/Documents" || {
+        echo "❌ Failed to navigate to Documents directory"
+        exit 1
+    }
 
     # Remove existing course materials if they exist
     if [ -d "$COURSE_DIR" ]; then
@@ -106,9 +114,25 @@ else
     fi
 
     # Download and extract course materials into claude-code-course folder
-    curl -L https://github.com/yuezheng2006/claude-code-pm-course/releases/latest/download/complete-course.zip -o course.zip
-    unzip -q course.zip -d claude-code-course
+    echo "Downloading course zip..."
+    if ! curl -L https://github.com/yuezheng2006/claude-code-pm-course/releases/latest/download/complete-course.zip -o course.zip; then
+        echo "❌ Failed to download course materials"
+        exit 1
+    fi
+
+    echo "Extracting course materials..."
+    if ! unzip -q course.zip -d claude-code-course; then
+        echo "❌ Failed to extract course materials"
+        rm -f course.zip
+        exit 1
+    fi
     rm course.zip
+
+    # Verify extraction was successful
+    if [ ! -d "$COURSE_DIR/.claude" ]; then
+        echo "❌ Course materials extraction failed - .claude directory not found"
+        exit 1
+    fi
 
     echo "✓ Course materials extracted to: $COURSE_DIR"
 fi
@@ -130,6 +154,22 @@ if [ "$TEST_MODE" = "1" ]; then
 else
     # Navigate to course directory and launch Claude Code
     # Redirect stdin from /dev/tty to enable interactive mode when piped
-    cd "$COURSE_DIR"
+    if [ ! -d "$COURSE_DIR" ]; then
+        echo "❌ Course directory not found: $COURSE_DIR"
+        exit 1
+    fi
+
+    cd "$COURSE_DIR" || {
+        echo "❌ Failed to navigate to course directory: $COURSE_DIR"
+        exit 1
+    }
+
+    # Verify we're in the right directory
+    if [ ! -d ".claude" ]; then
+        echo "❌ Error: .claude directory not found. Please ensure you're in the course-materials directory."
+        exit 1
+    fi
+
+    echo "Launching Claude Code..."
     claude "/start-1-1" < /dev/tty
 fi
