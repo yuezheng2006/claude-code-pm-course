@@ -6,10 +6,10 @@
 
 这是一个双用途仓库，用于Claude Code面向产品经理课程：
 
-1. **course-materials/** - 面向学生的交互式课程内容
+1. **course-materials/** - 面向学员的交互式课程内容
 2. **website/** - Next.js文档站点（部署到Vercel，域名ccforpms.com）
 
-学生下载course-materials/作为zip文件，解压后从该文件夹运行`claude`，输入`/start-1-1`开始学习。
+学员下载course-materials/作为zip文件，解压后从该文件夹运行`claude`，输入`/start-1-1`开始学习。
 
 ## 课程架构：配置驱动系统
 
@@ -34,7 +34,7 @@
 **教学脚本：**
 - 在每个模块的结尾，脚本读取`course-structure.json`
 - 它们动态确定接下来是什么
-- 它们告诉学生下一个模块的正确斜杠命令
+- 它们告诉学员下一个模块的正确斜杠命令
 
 **网站导航：**
 - `website/pages/fundamentals/_meta.ts`和`website/pages/advanced/_meta.ts`导入配置
@@ -78,7 +78,7 @@
 - ❌ 不要进行设置更改
 - ✅ 等待明确的指示
 
-这是一个交互式课程仓库。用户（或学生）将指导需要做什么。
+这是一个交互式课程仓库。用户（或学员）将指导需要做什么。
 
 ## 常用命令
 
@@ -119,7 +119,7 @@
 
 **GitHub发布的工作原理：**
 - `/releases/latest/download/complete-course.zip` - 始终指向最新发布
-- 使用此URL的学生自动获取最新版本
+- 使用此URL的学员自动获取最新版本
 - 您可以创建任意数量的发布（v1.0.1、v1.0.2、v1.1.0等）
 - 旧发布在它们的特定版本URL中仍然可用
 
@@ -197,14 +197,14 @@ npm run preview
 - `.claude/` - 驱动课程的斜杠命令、代理和教学脚本
 
 **斜杠命令：**
-位于`course-materials/.claude/commands/`，这些是指导学生完成模块的教学脚本：
+位于`course-materials/.claude/commands/`，这些是指导学员完成模块的教学脚本：
 - `/start-1-1`、`/start-1-2`等用于模块1课程
 - `/start-2-1`、`/start-2-2`等用于模块2课程
 
 **教学脚本行为：**
 当用户在course-materials/文件夹中输入斜杠命令时，阅读`course-materials/.claude/SCRIPT_INSTRUCTIONS.md`了解执行教学脚本的关键规则。主要要点：
 - 教学脚本必须逐字遵循（"Say:"块要逐字逐句）
-- "Check:"点是关卡 - 停止并等待学生响应
+- "Check:"点是关卡 - 停止并等待学员响应
 - "Action:"块包含确切的命令
 - 绝不打破第四面墙或说"我已经读过脚本" - 立即开始教学
 - 所有示例文件使用.md扩展名（不是.txt），以便与Obsidian配合使用
@@ -243,14 +243,14 @@ website/pages/
 
 ### 内部文档 (docs/)
 
-不包含在面向学生的材料中的规划文档：
+不包含在面向学员的材料中的规划文档：
 - `GITHUB_RELEASES_PLAN.md` - 发布策略文档
 - `SEO_IMPLEMENTATION_SPEC.md` - SEO规范
 
 ## 文件扩展名约定
 
 所有课程示例文件必须使用`.md`扩展名（不是`.txt`），因为：
-- 学生使用Obsidian来可视化课程文件（在模块1.2中教授）
+- 学员使用Obsidian来可视化课程文件（在模块1.2中教授）
 - Obsidian无法显示.txt文件
 - 这在SCRIPT_INSTRUCTIONS.md中强制执行
 
@@ -272,4 +272,4 @@ website/pages/
 
 ## 课程理念
 
-本课程通过动手实践教导产品经理使用Claude Code。课程内容本身通过Claude Code交付，创造了一种元学习体验，让学生通过使用工具来学习工具。
+本课程通过动手实践教导产品经理使用Claude Code。课程内容本身通过Claude Code交付，创造了一种元学习体验，让学员通过使用工具来学习工具。
