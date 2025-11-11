@@ -3,6 +3,40 @@
   "lastUpdated": "2025-10-29",
   "levels": [
     {
+      "id": "0",
+      "name": "入门",
+      "description": "安装和开始使用 Claude Code",
+      "modules": [
+        {
+          "id": "0.0",
+          "title": "介绍",
+          "slug": "introduction",
+          "path": "",
+          "command": "",
+          "description": "课程概览和您将学到的内容",
+          "estimatedMinutes": 10
+        },
+        {
+          "id": "0.1",
+          "title": "安装",
+          "slug": "installation",
+          "path": "",
+          "command": "",
+          "description": "安装 Claude Code 和前置条件",
+          "estimatedMinutes": 15
+        },
+        {
+          "id": "0.2",
+          "title": "启动 & 克隆",
+          "slug": "start-and-clone",
+          "path": "lesson-modules/0.2-start-and-clone/",
+          "command": "",
+          "description": "启动 Claude Code 并克隆本课程",
+          "estimatedMinutes": 5
+        }
+      ]
+    },
+    {
       "id": "1",
       "name": "基础",
       "description": "Claude Code 核心机制",
