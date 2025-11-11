@@ -7,22 +7,11 @@ export default {
   },
   docsRepositoryBase: 'https://github.com/yuezheng2006/claude-code-pm-course/blob/main/website',
   feedback: {
-    content: 'Give Carl feedback →',
+    content: 'Give yuezheng2006 feedback →',
     labels: 'feedback'
   },
   editLink: {
     component: null
-  },
-  footer: {
-    content: (
-      <span>
-        © {new Date().getFullYear()} Carl Vellotti. Licensed under{' '}
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">
-          CC BY-NC-ND 4.0
-        </a>
-        .
-      </span>
-    )
   },
   useNextSeoProps() {
     return { titleTemplate: '%s – Claude Code for Product Managers' }

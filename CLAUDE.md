@@ -6,7 +6,7 @@
 
 这是一个双用途仓库，用于Claude Code面向产品经理课程：
 
-1. **course-materials/** - 面向学生的交互式课程内容（通过GitHub Releases以zip形式分发）
+1. **course-materials/** - 面向学生的交互式课程内容
 2. **website/** - Next.js文档站点（部署到Vercel，域名ccforpms.com）
 
 学生下载course-materials/作为zip文件，解压后从该文件夹运行`claude`，输入`/start-1-1`开始学习。
