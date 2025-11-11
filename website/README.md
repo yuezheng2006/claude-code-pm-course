@@ -88,7 +88,7 @@ website/
 
 ## 链接
 
-- **在线网站:** https://website-5p5ua7fe2-yuezheng2006s-projects.vercel.app
+- **在线网站:** https://cmpp.cyber101.cc
 - **Vercel项目:** https://vercel.com/yuezheng2006s-projects/website
 - **课程仓库:** https://github.com/yuezheng2006/claude-code-pm-course
 - **Nextra 文档:** https://nextra.site

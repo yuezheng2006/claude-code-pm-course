@@ -18,7 +18,7 @@ export default {
   },
   theme: 'dark',
   head: function Head({ title, frontMatter }: { title?: string; frontMatter?: any }) {
-    const siteUrl = 'https://ccpm.cyber101.cc'
+    const siteUrl = 'https://cmpp.cyber101.cc'
     const pageTitle = title ? `${title} – Claude Code for Product Managers` : 'Claude Code for Product Managers'
     const description = frontMatter?.description || 'Learn Claude Code for PM work - an interactive course teaching file operations, agents, and AI-powered product management workflows.'
     const ogImage = frontMatter?.ogImage || `${siteUrl}/images/better-graphic.png`
