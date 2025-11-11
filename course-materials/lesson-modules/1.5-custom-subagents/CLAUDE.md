@@ -66,7 +66,7 @@
 
 让我通过让这三个子代理从不同角度审查同一功能规范来展示这有多强大。
 
-我们在 `feature-spec-realtime-collab.md` 有一个粗略的功能规范 - 这是实时协作功能的草案。"
+我们在 `feature-spec-realtime-collab.md` 有一个粗略的功能规范 - 这是实时合唱功能的草案。"
 
 **停止:告诉用户要求所有三个子代理从他们不同的角度审查功能规范并整合成 `feature-spec-review.md`**
 
